@@ -1,0 +1,1377 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>失智症精神行為症狀（BPSD）藥物治療最新進展</title>
+<link rel="stylesheet" href="fonts.css?v=5bea1193">
+<link rel="stylesheet" href="deck.css?v=039458c3">
+<style>
+/* ===== 本案專屬擴充樣式（全數以 k- 前綴、純 hex 色票，確保 DOM→PPTX 100% 原生轉換） ===== */
+.k-slide h2{font-size:54px}
+.k-sub{font-size:26px;margin-top:8px}
+.k-cite{font-size:17px;margin-top:10px;padding-top:8px}
+.k-nav button{font-size:16px;padding:5px 12px}
+
+/* 結論條 */
+.k-take{flex:0 0 auto;margin-top:auto;padding:12px 22px;border-radius:14px;background:var(--navy-wash);
+  border-left:12px solid var(--navy);font-size:25px;font-weight:900;line-height:1.38;color:var(--ink)}
+.k-take.sage{background:var(--sage-wash);border-left-color:var(--sage)}
+.k-take.terra{background:var(--terra-wash);border-left-color:var(--terra)}
+
+/* 膠囊標籤 */
+.k-badge{display:inline-block;padding:4px 14px;border-radius:999px;font-size:19px;font-weight:900;color:#FFFFFF;background:var(--navy)}
+.k-badge.terra{background:var(--terra)}
+.k-badge.sage{background:var(--sage)}
+.k-badge.butter{background:var(--butter);color:var(--ink)}
+
+/* 封面微調：左側文字區與右側插畫互不重疊 */
+.k-cover .k-cover-copy{left:96px;top:140px;width:900px}
+.k-cover .k-cover-copy h1{font-size:94px;line-height:1.12}
+.k-cover .k-cover-copy .k-lede{font-size:34px;margin-top:28px;line-height:1.5}
+.k-cover .k-cover-pills{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.k-cover .k-cover-pills span{padding:10px 20px;border-radius:999px;font-size:23px;font-weight:900;background:var(--navy-wash);color:var(--navy)}
+.k-cover .k-cover-pills span.terra{background:var(--terra-wash);color:var(--terra)}
+.k-cover .k-cover-pills span.sage{background:var(--sage-wash);color:var(--sage)}
+.k-cover .k-cover-meta{left:96px;bottom:100px;width:920px}
+.k-cover .k-cover-meta .k-who{font-size:31px}
+.k-cover .k-cover-img{right:56px;top:36px;width:780px;height:940px;object-fit:contain}
+
+/* p03 NNH 長條圖與警語面板 */
+.k-nnh-wrap{display:grid;grid-template-columns:1.14fr 0.86fr;gap:32px;flex:1 1 auto;min-height:0;align-items:stretch}
+.k-nnh-box{background:var(--line-2);border-radius:20px;padding:22px 26px;display:flex;flex-direction:column;justify-content:space-between}
+.k-nnh-box h3{margin:0 0 6px;font-size:29px;font-weight:900;color:var(--navy)}
+.k-nnh-row{display:grid;grid-template-columns:190px 1fr 215px;align-items:center;gap:14px;padding:7px 0}
+.k-nnh-row .k-dname{font-size:24px;font-weight:900;color:var(--ink)}
+.k-nnh-row .k-dname small{display:block;font-size:17px;font-weight:700;color:var(--muted)}
+.k-nnh-row .k-btrk{height:34px;background:#FFFFFF;border-radius:8px;overflow:hidden;border:2px solid var(--line)}
+.k-nnh-row .k-bfil{height:100%;border-radius:6px}
+.k-nnh-row .k-bval{font-family:"Noto Serif TC",serif;font-size:27px;font-weight:900;text-align:right;white-space:nowrap}
+
+/* p05 機轉與腦區迴路 */
+.k-mech-wrap{display:grid;grid-template-columns:0.94fr 1.06fr;gap:30px;flex:1 1 auto;min-height:0;align-items:stretch}
+.k-rec-list{display:flex;flex-direction:column;gap:12px;justify-content:space-between}
+.k-rec-card{border-radius:16px;padding:16px 20px;background:var(--line-2);border-left:10px solid var(--navy)}
+.k-rec-card.sage{background:var(--sage-wash);border-left-color:var(--sage)}
+.k-rec-card.terra{background:var(--terra-wash);border-left-color:var(--terra)}
+.k-rec-card.butter{background:var(--butter-wash);border-left-color:var(--butter)}
+.k-rec-card h3{margin:0 0 5px;font-size:24px;font-weight:900;color:var(--ink)}
+.k-rec-card p{margin:0;font-size:20px;line-height:1.4;color:var(--ink-2)}
+.k-circuit{border-radius:20px;background:var(--navy-wash);padding:20px 24px;display:flex;flex-direction:column;justify-content:space-between}
+.k-circuit h3{margin:0;font-size:28px;font-weight:900;color:var(--navy)}
+
+/* p07 雙國照顧者實證 */
+.k-dual-wrap{display:grid;grid-template-columns:1fr 1fr;gap:30px;flex:1 1 auto;min-height:0;align-items:stretch}
+.k-study-card{border-radius:20px;padding:22px 26px;background:var(--line-2);border-top:12px solid var(--navy);display:flex;flex-direction:column;justify-content:space-between}
+.k-study-card.sage{border-top-color:var(--sage);background:var(--sage-wash)}
+.k-study-card h3{margin:0;font-size:29px;font-weight:900;color:var(--navy)}
+.k-study-card.sage h3{color:var(--sage)}
+.k-metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:10px 0}
+.k-metric{background:#FFFFFF;border-radius:14px;padding:14px 16px;border:2px solid var(--line)}
+.k-metric .k-mlab{font-size:19px;font-weight:700;color:var(--muted);margin:0}
+.k-metric .k-mval{font-family:"Noto Serif TC",serif;font-size:46px;font-weight:900;color:var(--navy);line-height:1.1;margin:5px 0 3px}
+.k-study-card.sage .k-metric .k-mval{color:var(--sage)}
+.k-metric .k-mp{font-size:18px;font-weight:700;color:var(--ink-2);margin:0}
+.k-study-points{margin:0;padding-left:24px;font-size:22px;line-height:1.42;color:var(--ink)}
+.k-study-points li{margin-bottom:6px}
+
+/* p15 臨床案例互動頁 */
+.k-case-wrap{display:grid;grid-template-columns:0.82fr 1.18fr;gap:32px;flex:1 1 auto;min-height:0;align-items:stretch}
+.k-vignette{border-radius:20px;padding:22px 26px;background:var(--navy-wash);border-top:12px solid var(--navy);display:flex;flex-direction:column;justify-content:space-between}
+.k-vignette h3{margin:0 0 8px;font-size:29px;font-weight:900;color:var(--navy)}
+.k-vignette p{margin:0;font-size:22px;line-height:1.45;color:var(--ink)}
+.k-vitals{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+.k-vital{background:#FFFFFF;border-radius:12px;padding:12px 16px;border-left:8px solid var(--terra)}
+.k-vital b{display:block;font-size:19px;color:var(--terra)}
+.k-vital span{font-size:22px;font-weight:900;color:var(--ink)}
+.k-case-opts{display:flex;flex-direction:column;gap:10px;justify-content:space-between}
+.k-case-opts .k-opt{padding:12px 18px;grid-template-columns:50px 1fr;gap:14px}
+.k-case-opts .k-opt .k-letter{width:44px;height:44px;font-size:23px}
+.k-case-opts .k-opt .k-say{font-size:23px;line-height:1.32}
+.k-case-opts .k-opt .k-fb{font-size:19px;line-height:1.36;margin-top:5px}
+</style>
+</head>
+<body>
+
+<main id="k-stage">
+
+  <!-- ==================== p01：封面 ==================== -->
+  <section class="k-slide k-cover" data-chapter="迴路機轉與評估" data-title="封面：BPSD 藥物治療最新進展">
+    <img class="k-cover-img" src="assets/cover.png" alt="失智症精神行為症狀精準藥物治療與溫暖照護插畫">
+    <div class="k-cover-copy">
+      <h1>失智症精神行為症狀<br>藥物治療最新進展</h1>
+      <p class="k-lede" data-s="1">從受體與神經迴路機轉、<strong>2026 台灣臨床決策指引</strong>，<br>到處方安全監測與<strong>務實減藥停藥原則</strong></p>
+      <div class="k-cover-pills" data-s="2">
+        <span>四大 BPSD 迴路機轉圖解</span>
+        <span class="sage">Brexpiprazole 與新興靶向實證</span>
+        <span class="terra">臨床決策・注意事項・減藥停藥</span>
+      </div>
+    </div>
+    <div class="k-cover-meta">
+      <p class="k-who">專科醫師臨床實證專題講座｜15 分鐘互動式簡報（含配音・配樂・逐字稿）</p>
+      <p class="k-org">整合 JAMA Neurology・NEJM・Nature Medicine・Lancet・Alzheimer's &amp; Dementia・2026 JCMA 台灣專家共識</p>
+    </div>
+    <template class="k-narr">
+      <p data-step="0">各位醫師同仁大家好，歡迎進入今天的主題講座：失智症精神行為症狀，也就是 BPSD 的藥物治療最新進展。</p>
+      <p data-step="1">在臨床第一線，面對失智長者的激動攻擊、妄想幻覺、日落失眠或嚴重冷漠，我們需要一套從神經迴路機轉出發，涵蓋臨床選藥決策、安全監測注意事項，到減藥停藥原則的完整實戰指引。</p>
+      <p data-step="2">接下來十五分鐘，我們將透過作用機轉圖與資訊圖表，完整串聯國際第三期樞紐試驗與二零二六年台灣專家共識的臨床精髓。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p02：四大症狀群腦區與神經傳導機轉資訊圖 ==================== -->
+  <section class="k-slide" data-chapter="迴路機轉與評估" data-title="四大症狀群之腦區與神經傳導機轉">
+    <header class="k-head">
+      <h2>四大症狀群源自腦區與神經傳導失衡</h2>
+      <p class="k-sub">逾 90% 失智患者病程中出現 BPSD；鎖定受損神經迴路才能精準選藥、打破照護惡性循環</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g2" style="grid-template-columns:1.22fr 0.78fr;gap:26px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <!-- 左：四大表型機轉圖譜（2x2 迴路矩陣＋中央病理核心） -->
+        <div class="k-panel" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;background:var(--navy-wash)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+            <h3 style="font-size:26px;color:#24476E;margin:0">BPSD 四大表型之腦區迴路與受體靶點圖譜</h3>
+            <span class="k-badge" style="font-size:17px">核心病理：Tau / Aβ / α-Syn 網路退化</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;flex:1 1 auto">
+            <div data-s="1" style="background:#FFFFFF;border-radius:16px;padding:14px 18px;border-left:8px solid #B5482F;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+                <strong style="font-size:22px;color:#B5482F">1. 激動與攻擊（50–60%）</strong>
+                <span class="k-badge terra" style="font-size:15px;white-space:nowrap">前額葉↓・杏仁核↑</span>
+              </div>
+              <p style="font-size:19px;line-height:1.36;margin:6px 0;color:#1E2833">
+                <strong>神經傳導：</strong>前額葉 GABA 煞車失靈；藍斑核退化致杏仁核 <strong>α1 受體代償高敏感</strong>、5-HT 流失。
+              </p>
+              <p style="font-size:18px;font-weight:900;color:#B5482F;margin:0">🎯 靶向藥：Brexpiprazole・Citalopram・AXS-05</p>
+            </div>
+
+            <div data-s="2" style="background:#FFFFFF;border-radius:16px;padding:14px 18px;border-left:8px solid #24476E;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <strong style="font-size:23px;color:#24476E">2. 妄想與幻覺（精神病）</strong>
+                <span class="k-badge" style="font-size:16px">視覺皮質－邊緣系統</span>
+              </div>
+              <p style="font-size:19px;line-height:1.36;margin:6px 0;color:#1E2833">
+                <strong>神經傳導：</strong>視覺皮質 <strong>5-HT2A 受體上調</strong>、紋狀體多巴胺高張、皮質毒蕈鹼 <strong>M1/M4 缺失</strong>。
+              </p>
+              <p style="font-size:18px;font-weight:900;color:#24476E;margin:0">🎯 靶向藥：Pimavanserin（5-HT2A）・KarXT（M1/M4）</p>
+            </div>
+
+            <div data-s="3" style="background:#FFFFFF;border-radius:16px;padding:14px 18px;border-left:8px solid #3F7A55;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <strong style="font-size:23px;color:#3F7A55">3. 睡眠障礙與日落症候群</strong>
+                <span class="k-badge sage" style="font-size:16px">SCN － 下視丘迴路</span>
+              </div>
+              <p style="font-size:19px;line-height:1.36;margin:6px 0;color:#1E2833">
+                <strong>神經傳導：</strong>視交叉上核（SCN）生物鐘瓦解，夜間<strong>食慾素（Orexin OX1R/OX2R）</strong>過度促醒。
+              </p>
+              <p style="font-size:18px;font-weight:900;color:#3F7A55;margin:0">🎯 靶向藥：Suvorexant（DORA，免除 BZD 譫妄跌倒）</p>
+            </div>
+
+            <div data-s="4" style="background:#FFFFFF;border-radius:16px;padding:14px 18px;border-left:8px solid #D99B26;display:flex;flex-direction:column;justify-content:space-between">
+              <div style="display:flex;justify-content:space-between;align-items:center;gap:8px">
+                <strong style="font-size:22px;color:#9A5B13">4. 冷漠症（Apathy）</strong>
+                <span class="k-badge butter" style="font-size:15px;white-space:nowrap">ACC－腹側紋狀體</span>
+              </div>
+              <p style="font-size:19px;line-height:1.36;margin:6px 0;color:#1E2833">
+                <strong>神經傳導：</strong>前扣帶迴至腹側紋狀體<strong>多巴胺（DA）與正腎上腺素（NE）動機訊號低下</strong>。
+              </p>
+              <p style="font-size:18px;font-weight:900;color:#9A5B13;margin:0">🎯 靶向藥：Methylphenidate（SSRI 對此無效）</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 右：臨床負荷資訊卡 -->
+        <div class="k-col" style="justify-content:space-between;gap:14px">
+          <div class="k-card terra" data-s="1" style="padding:18px 22px">
+            <span class="k-badge terra">臨床負荷實證（Grossberg 2026 / Cheng 2026）</span>
+            <p class="k-big" style="font-size:52px;color:#B5482F;margin:6px 0">39.1 小時 / 週</p>
+            <p style="font-size:20px;line-height:1.4">激動患者之非正式照顧者每週平均投入近 40 小時照護（較無激動者多出 <strong>&gt;20 小時／週</strong>監督時間），醫療成本翻倍。</p>
+          </div>
+          <div class="k-card navy" data-s="3" style="padding:18px 22px">
+            <span class="k-badge">雙向惡性循環（Pearson r = 0.58）</span>
+            <h3 style="margin-top:6px;font-size:25px;color:#24476E">病患症狀 ⇄ 照顧者耗竭高度連動</h3>
+            <p style="font-size:20px;line-height:1.4">患者激動與妄想引發家屬失眠與情緒崩潰；家屬的高壓語氣又反過來刺激患者杏仁核，加速提早送入機構。</p>
+          </div>
+          <div class="k-card sage" data-s="4" style="padding:16px 22px">
+            <h3 style="margin:0 0 4px;font-size:24px;color:#3F7A55">精準治療新典範</h3>
+            <p style="font-size:20px;line-height:1.38">辨識個別症狀群背後的神經迴路，以<strong>受體靶向調節</strong>取代無差別化學鎮靜。</p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take" data-s="4">核心觀念：BPSD 不是單一疾病；激動、妄想、失眠與冷漠各有專屬神經迴路與靶向藥物。</div>
+    </div>
+    <p class="k-cite">資料來源：Cummings JL et al., JAMA Neurol 2024;81(6):645–656 [PMID 38558015]；Cheng YC et al., JCMA 2026;89(2):99–111 [PMID 41527161]；Grossberg GT et al., CNS Drugs 2026 [PMID 41439450]</p>
+    <template class="k-narr">
+      <p data-step="0">超過百分之九十的失智患者會出現 BPSD。二零二四年 Cummings 在 JAMA Neurology 指出，四大症狀群源自截然不同的腦區與神經傳導失衡。</p>
+      <p data-step="1">第一，激動與攻擊盛行率達五到六成，源於前額葉煞車失靈，加上藍斑核退化後杏仁核 α1 受體代償性高敏感，使家屬每週耗費三十九點一小時照護。</p>
+      <p data-step="2">第二，妄想與幻覺與視覺皮質 5-HT2A 受體上調及毒蕈鹼 M1、M4 缺失有關，是 Pimavanserin 與 KarXT 的靶點。</p>
+      <p data-step="3">第三，日落失眠源於視交叉上核退化與食慾素夜間過度促醒；第四，冷漠症則是前扣帶迴至紋狀體的多巴胺動機迴路斷聯。</p>
+      <p data-step="4">由於患者症狀與照顧者困擾呈零點五八高度正相關，唯有鎖定受損迴路精準選藥，才能打破雙向惡性循環。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p03：傳統抗精神病藥 NNH 數據與致死機轉頁 ==================== -->
+  <section class="k-slide" data-chapter="迴路機轉與評估" data-title="傳統抗精神病藥的死亡風險與 NNH">
+    <header class="k-head">
+      <h2>傳統抗精神病藥面臨死亡風險黑框警語</h2>
+      <p class="k-sub">180 天絕對死亡風險與每害一人數（NNH，數值越小致死風險越高；Maust 2015，N = 90,786）</p>
+    </header>
+    <div class="k-body">
+      <div class="k-nnh-wrap">
+        <div class="k-nnh-box">
+          <h3>各類藥物相較未用藥配對組之 180 天死亡風險增幅與 NNH</h3>
+          <div class="k-nnh-row" data-s="1">
+            <div class="k-dname">Haloperidol<small>第一代強效 D2 拮抗劑</small></div>
+            <div class="k-btrk"><div class="k-bfil" style="width:95%;background:#B5482F"></div></div>
+            <div class="k-bval" style="color:#B5482F">+3.8%｜NNH 26</div>
+          </div>
+          <div class="k-nnh-row" data-s="2">
+            <div class="k-dname">Risperidone<small>高親和力 D2/5-HT2A 拮抗</small></div>
+            <div class="k-btrk"><div class="k-bfil" style="width:92%;background:#B5482F"></div></div>
+            <div class="k-bval" style="color:#B5482F">+3.7%｜NNH 27</div>
+          </div>
+          <div class="k-nnh-row" data-s="2">
+            <div class="k-dname">Olanzapine<small>多受體阻斷（強抗膽鹼/鎮靜）</small></div>
+            <div class="k-btrk"><div class="k-bfil" style="width:63%;background:#D97941"></div></div>
+            <div class="k-bval" style="color:#B5482F">+2.5%｜NNH 40</div>
+          </div>
+          <div class="k-nnh-row" data-s="3">
+            <div class="k-dname">Quetiapine<small>快速解離低 D2 親和力</small></div>
+            <div class="k-btrk"><div class="k-bfil" style="width:50%;background:#24476E"></div></div>
+            <div class="k-bval" style="color:#24476E">+2.0%｜NNH 50</div>
+          </div>
+          <div class="k-nnh-row" data-s="4">
+            <div class="k-dname">抗憂鬱劑對照<small>SSRIs 等抗憂鬱藥物</small></div>
+            <div class="k-btrk"><div class="k-bfil" style="width:15%;background:#3F7A55"></div></div>
+            <div class="k-bval" style="color:#3F7A55">+0.6%｜NNH 166</div>
+          </div>
+        </div>
+        <div class="k-col" style="justify-content:space-between">
+          <div class="k-card terra" data-s="1" style="padding:18px 24px">
+            <span class="k-badge terra">FDA 黑框警語：死亡率上升 1.5–1.7 倍之三大病理機轉</span>
+            <p style="font-size:21px;line-height:1.42;margin-top:8px">
+              <strong>1. 腦血管事件（中風）：</strong>血小板聚集、姿勢性低血壓與脫水血栓（Risperidone / Olanzapine 風險尤高）。<br>
+              <strong>2. 吸入性肺炎：</strong>D2 阻斷導致咽喉肌肉僵硬與吞嚥反射遲鈍，加上 H1 過度鎮靜。<br>
+              <strong>3. 心源性猝死：</strong>心肌鉀離子通道（hERG）阻斷延長 QTc，誘發心室頻脈。
+            </p>
+          </div>
+          <div class="k-card navy" data-s="3" style="padding:18px 24px">
+            <span class="k-badge">2026 台灣專家共識關鍵調整</span>
+            <h3 style="margin-top:8px;font-size:28px">Risperidone 降為第二線有限推薦（RG-T 2）</h3>
+            <p style="font-size:21px;line-height:1.42">雖具台灣衛福部適應症且療效明確（LoE A），但考量高齡失智患者之<strong>錐體外徑症狀（EPS）、中風與下肢水腫風險</strong>，共識將其降為 RG-T 2。</p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take terra" data-s="4">臨床底線：Haloperidol 與 Risperidone 每治療 26–27 人即增加 1 例 180 天內死亡；非緊急自傷傷人絕不作為常規首選。</div>
+    </div>
+    <p class="k-cite">資料來源：Maust DT et al., JAMA Psychiatry 2015;72(5):438–445 [PMID 25786075]；Cheng YC et al., J Chin Med Assoc 2026;89(2):99–111 [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">為什麼臨床指引對傳統抗精神病藥如此謹慎？這張圖來自 Maust 團隊在 JAMA Psychiatry 發表、超過九萬名高齡失智患者的配對研究。</p>
+      <p data-step="1">美國 FDA 黑框警語指出，失智患者使用抗精神病藥後死亡率上升一點五到一點七倍。Haloperidol 一百八十天每害一人數 NNH 只有二十六；三大死因為腦中風、咽喉僵硬引起的吸入性肺炎，以及 QTc 延長心因性猝死。</p>
+      <p data-step="2">臨床常用的 Risperidone，NNH 也高達二十七；Olanzapine 則是四十。</p>
+      <p data-step="3">因此二零二六年台灣專家共識做出關鍵調整：儘管 Risperidone 有衛福部適應症與 A 級實證，但考量中風、錐體外徑症狀與下肢水腫風險，將它降為第二級有限推薦；Quetiapine 的 NNH 為五十，同列第二級。</p>
+      <p data-step="4">相對地，抗憂鬱劑 NNH 為一百六十六。處方任何抗精神病藥前都必須嚴格把關。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p04：台灣 2026 共識 ABCDE-STEP 臨床決策流程圖 ==================== -->
+  <section class="k-slide" data-chapter="迴路機轉與評估" data-title="臨床決策起點：ABCDE-STEP 結構化流程">
+    <header class="k-head">
+      <h2>臨床決策起點：ABCDE-STEP 結構化流程</h2>
+      <p class="k-sub">2026 台灣專家共識（Cheng 2026 Table 2）：從病因排查、非藥物介入到安全處方與減藥時程</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g3" style="grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:16px">
+        <div class="k-card navy" data-s="1" style="padding:18px 22px;border-top:8px solid #24476E">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;margin:0">A</span>
+            <span class="k-badge">Assess 急性病因與藥物</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">先排除譫妄與可逆誘因</h3>
+          <p style="font-size:20px;line-height:1.4">篩檢<strong>疼痛、泌尿道／肺部感染、便秘、尿滯留、脫水、電解質異常</strong>；立即檢視並停用致激動藥物（<strong>抗膽鹼藥、BZD、多巴胺致效劑、類固醇</strong>）並矯正視聽力。</p>
+        </div>
+        <div class="k-card navy" data-s="1" style="padding:18px 22px;border-top:8px solid #24476E">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;margin:0">B</span>
+            <span class="k-badge">Baseline 量化基線與風險</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">紀錄表型與緊急危害</h3>
+          <p style="font-size:20px;line-height:1.4">以 <strong>CMAI 或 NPI-Q</strong> 量化基線分數；區分言語 vs 肢體、非攻擊 vs 攻擊表型；評估自傷傷人急迫性、跌倒風險與照顧者崩潰程度。</p>
+        </div>
+        <div class="k-card sage" data-s="2" style="padding:18px 22px;border-top:8px solid #3F7A55">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;color:#3F7A55;margin:0">C</span>
+            <span class="k-badge sage">Causes &amp; Care 非藥物優先</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">鎖定觸發點與環境調整</h3>
+          <p style="font-size:20px;line-height:1.4">找出時段與環境誘因（如傍晚過度刺激、洗澡抗拒）；執行環境降噪、結構化活動、音樂／觸撫與家屬溝通教練。<strong>重度困擾時採「並行評估模式」</strong>。</p>
+        </div>
+        <div class="k-card terra" data-s="3" style="padding:18px 22px;border-top:8px solid #B5482F">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;color:#B5482F;margin:0">D</span>
+            <span class="k-badge terra">Decision 用藥決策門檻</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">僅於兩大條件下啟動用藥</h3>
+          <p style="font-size:20px;line-height:1.4"><strong>(1) 非藥物處置無效</strong>，或 <strong>(2) 嚴重痛苦、立即危險或照護瓦解</strong>。須完成醫病共享決策（SDM），病歷載明目標與五大監測項（EPS、姿勢性低血壓、QTc、鎮靜、中風）。</p>
+        </div>
+        <div class="k-card terra" data-s="3" style="padding:18px 22px;border-top:8px solid #B5482F">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;color:#B5482F;margin:0">E</span>
+            <span class="k-badge terra">Execute 安全處方執行</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">低劑量起始、慢速滴定</h3>
+          <p style="font-size:20px;line-height:1.4">遵循 <strong>Start low, go slow</strong>；避免多重用藥、優先選擇每日一次給藥；必查藥物交互作用（如 <strong>SSRI 併用抗血小板藥增加出血、QTc 延長藥物疊加</strong>）。</p>
+        </div>
+        <div class="k-card butter" data-s="4" style="padding:18px 22px;border-top:8px solid #D99B26">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="k-no" style="font-size:38px;color:#9A5B13;margin:0">STEP</span>
+            <span class="k-badge butter">Safety &amp; Taper 檢視時程</span>
+          </div>
+          <h3 style="font-size:25px;margin:6px 0">首月每週查、4 週判療效</h3>
+          <p style="font-size:20px;line-height:1.4"><strong>S</strong> 第 1 個月每週檢視安全；<strong>T</strong> 足量滿 4 週無顯著療效即減停；<strong>E</strong> 穩定滿 <strong>3–6 個月</strong>探索減藥；<strong>P</strong> 預作復發防範與家屬再培訓。</p>
+        </div>
+      </div>
+      <div class="k-take sage" data-s="4">台灣在地化亮點：針對高門診量與急迫家屬崩潰，共識允許「非藥物與藥物評估並行（Concurrent Model）」，但嚴守 4 週療效檢核。</div>
+    </div>
+    <p class="k-cite">資料來源：Cheng YC et al., J Chin Med Assoc 2026;89(2):99–111, Table 2 &amp; Table 4 [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">面對激動患者，臨床決策第一步怎麼走？二零二六年台灣失智症專家群在 JCMA 發表的共識，提出了實用的 ABCDE-STEP 流程。</p>
+      <p data-step="1">首先是 A，先排除譫妄、疼痛、泌尿道感染、便秘或尿滯留，並優先停用抗膽鹼藥與苯二氮平類；接著是 B，以 CMAI 或 NPI-Q 量化基線嚴重度與跌倒風險。</p>
+      <p data-step="2">再來是 C，落實非藥物環境調整。考量台灣門診量大且家屬常瀕臨崩潰，共識允許重度高風險個案採「非藥物與藥物並行評估模式」。</p>
+      <p data-step="3">進入 D 與 E，僅在非藥物無效或有危害時用藥，完成共享決策，低劑量起始、慢速滴定，並留意交互作用。</p>
+      <p data-step="4">最後是 STEP 時程：首月每週查安全，足量滿四週無效即停藥；穩定三到六個月後主動評估減藥。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p05：Brexpiprazole 受體機轉與腦區迴路圖 ==================== -->
+  <section class="k-slide" data-chapter="Brexpiprazole 實證" data-title="Brexpiprazole 受體精準調控機轉">
+    <header class="k-head">
+      <h2>Brexpiprazole 精準調控三大單胺受體</h2>
+      <p class="k-sub">血清素－多巴胺活性調節劑（SDAM）：次奈米莫耳親和力修復前額葉煞車、降溫杏仁核油門</p>
+    </header>
+    <div class="k-body">
+      <div class="k-mech-wrap">
+        <div class="k-rec-list">
+          <div class="k-rec-card sage" data-s="1">
+            <h3>1. 血清素軸：5-HT1A 部分致效（Ki = 0.12 nM）＋ 5-HT2A 拮抗（0.47 nM）</h3>
+            <p>強化前額葉皮質下行抑制訊號、緩解焦慮與衝動，同時減少深層睡眠破壞與錐體外徑副作用。</p>
+          </div>
+          <div class="k-rec-card" data-s="2">
+            <h3>2. 多巴胺軸：D2（Ki = 0.30 nM）/ D3 部分致效（適度內在活性）</h3>
+            <p>內在活性低於 Aripiprazole：在多巴胺過高之邊緣區發揮功能性拮抗，在黑質紋狀體維持基礎多巴胺張力，大幅降低靜坐不能與 EPS。</p>
+          </div>
+          <div class="k-rec-card terra" data-s="3">
+            <h3>3. 正腎上腺素軸：α1B（Ki = 0.17 nM）/ α2C 強效拮抗</h3>
+            <p>直接阻斷失智大腦因藍斑核（LC）退化而代償性高敏感的杏仁核 α1B 受體，精準平息暴怒與肢體攻擊。</p>
+          </div>
+          <div class="k-rec-card butter" data-s="4">
+            <h3>4. 低組織胺 H1（Ki = 19 nM）與極低毒蕈鹼 M1（&gt;1,000 nM）親和力</h3>
+            <p>非鎮靜性控制激動（嗜睡僅 3.7%），完全避開抗膽鹼作用，不加速認知退化（12–24 週 MMSE 維持穩定）。</p>
+          </div>
+        </div>
+        <div class="k-circuit" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between">
+          <h3 style="margin-bottom:6px">前額葉－杏仁核神經迴路與突觸靶點機制圖</h3>
+          <div data-s="1" style="background:#FFFFFF;border-radius:16px;padding:12px 18px;border:3px solid #3F7A55">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
+              <span class="k-badge sage" style="font-size:17px">前額葉皮質（PFC）</span>
+              <strong style="font-size:21px;color:#3F7A55">頂層認知控制與衝動煞車修復</strong>
+            </div>
+            <p style="font-size:18px;line-height:1.38;margin:0 0 2px;color:#1E2833">• <strong>失智病理：</strong>額葉退化使對邊緣系統之 GABA 下行抑制減弱。</p>
+            <p style="font-size:18px;line-height:1.38;margin:0;color:#3F7A55">• <strong>藥物作用：5-HT1A 部分致效 ＋ α2C 拮抗 → 恢復額葉執行調控。</strong></p>
+          </div>
+
+          <div data-s="2" style="display:flex;justify-content:space-around;align-items:center;padding:4px 12px">
+            <span style="font-size:19px;font-weight:900;color:#3F7A55;background:#E9F3EC;padding:4px 14px;border-radius:999px">▼ 強化下行抑制煞車（PFC → 杏仁核）</span>
+            <span style="font-size:19px;font-weight:900;color:#B5482F;background:#FBEDE8;padding:4px 14px;border-radius:999px">▲ 阻斷過度衝動上衝（藍斑核 → 杏仁核）</span>
+          </div>
+
+          <div data-s="3" style="background:#FFFFFF;border-radius:16px;padding:12px 18px;border:3px solid #B5482F">
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:4px">
+              <span class="k-badge terra" style="font-size:17px">杏仁核・藍斑核・紋狀體</span>
+              <strong style="font-size:21px;color:#B5482F">底層情緒油門降溫與運動平衡</strong>
+            </div>
+            <p style="font-size:18px;line-height:1.38;margin:0 0 2px;color:#1E2833">• <strong>失智病理：</strong>藍斑核流失 → 杏仁核 α1 受體代償上調，微幅刺激即引爆攻擊。</p>
+            <p style="font-size:18px;line-height:1.38;margin:0;color:#B5482F">• <strong>藥物作用：α1B 強效拮抗 ＋ D2/D3 部分致效 ＋ 5-HT2A 拮抗 → 穩定情緒且低 EPS。</strong></p>
+          </div>
+
+          <div data-s="4" style="background:#24476E;border-radius:16px;padding:12px 18px;color:#FFFFFF;text-align:center">
+            <p style="font-size:21px;font-weight:900;color:#F3C84B;margin:0 0 4px">臨床表型轉化：非鎮靜性緩解三大 CMAI 激動行為因子</p>
+            <p style="font-size:18px;margin:0;color:#FFFFFF">肢體攻擊（F1 ↓）＋ 漫遊抗拒（F2 ↓）＋ 言語咆哮（F3 ↓）｜不傷認知（MMSE 穩定）</p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take sage" data-s="4">機轉核心：Brexpiprazole 透過「修復前額葉煞車＋調降杏仁核 α1B 油門」發揮抗激動療效，而非傳統藥物的化學性鎮靜。</div>
+    </div>
+    <p class="k-cite">資料來源：Lee D et al., JAMA Neurol 2023 [PMID 37930669]；Cummings JL et al., JAMA Neurol 2024 [PMID 38558015]；Smoller R et al., Drugs 2025 [PMID 40913683]</p>
+    <template class="k-narr">
+      <p data-step="0">接著看首個獲美國 FDA 與台灣衛福部核准用於阿茲海默症激動的 Brexpiprazole，它的受體機轉如何突破傳統藥物的瓶頸？</p>
+      <p data-step="1">首先在血清素軸，它對 5-HT1A 具零點一二奈米莫耳高親和力部分致效，並拮抗 5-HT2A，能修復前額葉皮質的下行抑制煞車。</p>
+      <p data-step="2">第二，在多巴胺軸，它是 D2 與 D3 部分致效劑，內在活性比 Aripiprazole 更溫和，在抑制邊緣系統多巴胺過高的同時，大幅降低靜坐不能與錐體外徑副作用。</p>
+      <p data-step="3">第三點最關鍵：失智患者藍斑核退化會讓杏仁核 α1B 受體代償性高敏感，微幅刺激就引爆攻擊；Brexpiprazole 具零點一七奈米莫耳 α1B 強效拮抗，直接為杏仁核降溫。</p>
+      <p data-step="4">加上對 H1 與毒蕈鹼 M1 親和力極低，能非鎮靜性緩解三大激動行為，且不傷認知。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p06：Brexpiprazole 四大樞紐試驗與三大行為因子資訊圖 ==================== -->
+  <section class="k-slide" data-chapter="Brexpiprazole 實證" data-title="四大樞紐試驗確立二至三毫克有效劑量">
+    <header class="k-head">
+      <h2>四大樞紐試驗確立二至三毫克有效劑量</h2>
+      <p class="k-sub">國際三項第三期 RCT（Grossberg 2020、Lee 2023）與日本 Phase 2/3（Nakamura 2024）完整證據鏈</p>
+    </header>
+    <div class="k-body">
+      <table class="k-tb sm" style="font-size:22px;margin-bottom:16px">
+        <thead>
+          <tr>
+            <th>臨床試驗（第一作者・年份）</th>
+            <th>樣本數與療程</th>
+            <th>目標劑量組別</th>
+            <th>主要終點 CMAI 組間差（LSMD）</th>
+            <th>p 值與效果量（Cohen's d）</th>
+            <th>臨床劑量決策啟示</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-s="1">
+            <td class="b">Trial 283（Grossberg 2020）</td>
+            <td>N = 433（12 週）</td>
+            <td>固定 2 mg/d vs 1 mg/d</td>
+            <td class="b" style="color:#24476E">2 mg：−3.77（1 mg：+0.23）</td>
+            <td>2 mg <strong>p = 0.040（d = 0.25）</strong>；1 mg p = 0.90</td>
+            <td><strong>1 mg/d 無效</strong>，確立最低有效劑量為 2 mg/d</td>
+          </tr>
+          <tr data-s="1">
+            <td class="b">Trial 284（Grossberg 2020）</td>
+            <td>N = 270（12 週）</td>
+            <td>彈性 0.5–2 mg/d</td>
+            <td class="b" style="color:#3F7A55">達 2 mg 亞群：−5.06（整體 −2.34）</td>
+            <td>2 mg 亞群 <strong>p = 0.012（d = 0.41）</strong></td>
+            <td>未滴定至 2 mg 則療效不足，促成後續試驗設計</td>
+          </tr>
+          <tr class="hl" data-s="2">
+            <td class="b">Trial 213（Lee 2023 JAMA Neurol）</td>
+            <td>N = 345（12 週）</td>
+            <td>固定 2 或 3 mg/d</td>
+            <td class="b" style="color:#B5482F">−5.32（−22.6 vs −17.3）</td>
+            <td><strong>p = 0.003（d = 0.35）</strong>；CGI-S p = 0.008</td>
+            <td>促成美國 FDA 與台灣衛福部正式核准適應症</td>
+          </tr>
+          <tr data-s="3">
+            <td class="b">日本 Phase 2/3（Nakamura 2024）</td>
+            <td>N = 410（10 週）</td>
+            <td>固定 2 mg/d vs 1 mg/d</td>
+            <td class="b" style="color:#3F7A55">2 mg：−7.2｜1 mg：−3.7</td>
+            <td>2 mg <strong>p &lt; 0.0001</strong>；1 mg p = 0.0175</td>
+            <td>亞洲高齡低體重族群第 4 週即顯著分開</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="k-g4" style="gap:16px;flex:1 1 auto;min-height:0" data-s="4">
+        <div class="k-card navy" style="padding:16px 20px;display:flex;flex-direction:column;justify-content:center">
+          <span class="k-badge">統合分析（Cummings 2026，N=611）</span>
+          <p class="k-big" style="font-size:48px;color:#24476E;margin:8px 0">LSMD −4.50</p>
+          <p style="font-size:20px">95% CI −6.90 至 −2.10（<strong>p &lt; 0.001，d = 0.30</strong>）；29 項 CMAI 行為中 19 項優於安慰劑。</p>
+        </div>
+        <div class="k-card terra" style="padding:16px 20px;display:flex;flex-direction:column;justify-content:center">
+          <span class="k-badge terra">Factor 1：肢體與言語攻擊</span>
+          <p class="k-big" style="font-size:48px;color:#B5482F;margin:8px 0">−1.56 分</p>
+          <p style="font-size:20px"><strong>p &lt; 0.001（d = 0.27）</strong>：顯著減少推打、抓咬、踢人、摔物與咒罵威脅。</p>
+        </div>
+        <div class="k-card sage" style="padding:16px 20px;display:flex;flex-direction:column;justify-content:center">
+          <span class="k-badge sage">Factor 2 &amp; 3：非攻擊與言語激動</span>
+          <p class="k-big" style="font-size:44px;color:#3F7A55;margin:8px 0">−1.16 / −1.23</p>
+          <p style="font-size:20px">身體非攻擊漫遊焦躁 <strong>−1.16（p = 0.012）</strong>；言語激動重複咆哮 <strong>−1.23（p &lt; 0.001）</strong>。</p>
+        </div>
+        <div class="k-card butter" style="padding:16px 20px;display:flex;flex-direction:column;justify-content:center">
+          <span class="k-badge butter">合併精神病亞群（Tariot 2026）</span>
+          <p class="k-big" style="font-size:48px;color:#9A5B13;margin:8px 0">LSMD −9.18</p>
+          <p style="font-size:20px">激動合併幻覺／妄想者效果量達 <strong>d = 0.52（p = 0.004）</strong>；無精神病者亦顯著（−4.22，p = 0.002）。</p>
+        </div>
+      </div>
+      <div class="k-take" data-s="4" style="margin-top:12px">劑量決策鐵律：0.5 mg 與 1 mg 僅為過渡滴定劑量；臨床須滴定至每日 2 mg（最高 3 mg）方能發揮完整抗激動療效。</div>
+    </div>
+    <p class="k-cite">資料來源：Grossberg 2020 AJGP [PMID 31708380]；Lee 2023 JAMA Neurol [PMID 37930669]；Cummings 2026 Alzheimers Dement [PMID 41591746]；Nakamura 2024 [PMID 39369280]；Tariot 2026 [PMID 42052145]</p>
+    <template class="k-narr">
+      <p data-step="0">臨床上 Brexpiprazole 要開幾毫克才有效？我們看四項第三期樞紐試驗數據。</p>
+      <p data-step="1">在 Grossberg 二零二零年兩項試驗中，Trial 283 固定兩毫克組顯著降低 CMAI 三點七七分，但一毫克組無效；Trial 284 彈性劑量也只有滴定到兩毫克的亞群顯著改善五點零六分。因此零點五與一毫克只是爬坡，目標須達兩毫克。</p>
+      <p data-step="2">Trial 213 鎖定二到三毫克，第十二週 CMAI 改善五點三二分，促成美台核准。</p>
+      <p data-step="3">日本四百一十人試驗中，兩毫克組第十週更降低 CMAI 達七點二分，第四週即顯著分開。</p>
+      <p data-step="4">二零二六年 Cummings 統合證實二到三毫克能同步改善肢體攻擊、非攻擊漫遊與言語咆哮三大因子；Tariot 分析更顯示合併妄想幻覺時 CMAI 降幅高達九點一八分。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p07：國際與日本雙統合照顧者困擾頁 ==================== -->
+  <section class="k-slide" data-chapter="Brexpiprazole 實證" data-title="第四週起同步減輕症狀與照顧者困擾">
+    <header class="k-head">
+      <h2>第四週起同步減輕症狀與照顧者困擾</h2>
+      <p class="k-sub">國際（N = 610）與日本（N = 410）第三期研究：驗證第 4 週為臨床初步療效與家屬減壓檢核點</p>
+    </header>
+    <div class="k-body">
+      <div class="k-dual-wrap">
+        <div class="k-study-card" data-s="1">
+          <div>
+            <span class="k-badge">國際第三期統合分析（Grossberg 2026）</span>
+            <h3 style="margin-top:8px">Trial 283 + 213（N = 610，12 週，2–3 mg/d）</h3>
+          </div>
+          <div class="k-metric-grid">
+            <div class="k-metric">
+              <p class="k-mlab">NPI 精神行為症狀總分差</p>
+              <p class="k-mval">−3.31</p>
+              <p class="k-mp">95% CI −5.24 至 −1.39｜p &lt; 0.001</p>
+            </div>
+            <div class="k-metric">
+              <p class="k-mlab">NPI 照顧者困擾總分差（NPI-D）</p>
+              <p class="k-mval">−1.62</p>
+              <p class="k-mp">95% CI −2.55 至 −0.70｜p &lt; 0.001</p>
+            </div>
+          </div>
+          <ul class="k-study-points">
+            <li data-s="2"><strong>第 4 週即顯著分開</strong>：照顧者困擾於第 4 週即優於安慰劑（p = 0.008），呼應台灣共識「足量 4 週評估療效」之時程設計。</li>
+            <li data-s="2"><strong>高度連動（Pearson r = 0.58）</strong>：患者激動／攻擊單項困擾顯著下降（LSMD −0.41，p &lt; 0.001），同步改善家屬睡眠與情緒負荷。</li>
+          </ul>
+        </div>
+        <div class="k-study-card sage" data-s="3">
+          <div>
+            <span class="k-badge sage">日本第 2/3 期試驗分析（Nakamura 2025）</span>
+            <h3 style="margin-top:8px">亞洲高齡族群（N = 410，10 週，2 mg/d 組）</h3>
+          </div>
+          <div class="k-metric-grid">
+            <div class="k-metric">
+              <p class="k-mlab">NPI 精神行為症狀總分差</p>
+              <p class="k-mval">−8.4</p>
+              <p class="k-mp">SMD = 0.485｜p &lt; 0.0001</p>
+            </div>
+            <div class="k-metric">
+              <p class="k-mlab">NPI 照顧者困擾總分差（NPI-D）</p>
+              <p class="k-mval">−3.9</p>
+              <p class="k-mp">95% CI −5.6 至 −2.3｜p &lt; 0.0001</p>
+            </div>
+          </div>
+          <ul class="k-study-points">
+            <li><strong>中大型效果量（SMD = 0.539）</strong>：平均年齡 80.1 歲之亞洲失智患者，10 週即展現顯著家屬減壓效益。</li>
+            <li><strong>核心困擾全面改善</strong>：激動／攻擊困擾（−0.8，p = 0.0002）、易怒困擾（−0.8，p &lt; 0.0001）與夜間行為困擾同步下降。</li>
+          </ul>
+        </div>
+      </div>
+      <div class="k-take" data-s="4">臨床溝通重點：用藥前可向家屬說明「前 2 週為安全爬坡期，第 4 週起症狀與照護壓力會逐步減輕」（註：NPI-D 屬探索性事後分析）。</div>
+    </div>
+    <p class="k-cite">資料來源：Grossberg GT et al., CNS Drugs 2026 [PMID 41439450]；Nakamura Y et al., Int J Geriatr Psychiatry 2025;40(7):e70134 [PMID 40717666]</p>
+    <template class="k-narr">
+      <p data-step="0">門診家屬最常問：「這顆藥吃多久才會見效？」這兩項大型研究提供了具體的衛教依據。</p>
+      <p data-step="1">二零二六年 Grossberg 國際六百一十人統合分析顯示，Brexpiprazole 二到三毫克在第十二週讓 NPI 症狀總分比安慰劑多降三點三一分，照顧者困擾總分也顯著降低一點六二分。</p>
+      <p data-step="2">關鍵時間點在「第四週」：前兩週安全爬坡、第三週達兩毫克後，第四週起照顧者困擾即顯著優於安慰劑，印證台灣共識「足量四週評估療效」的建議。</p>
+      <p data-step="3">日本四百一十人試驗中，兩毫克組第十週更讓照顧者困擾降低三點九分，效果量零點五三九。</p>
+      <p data-step="4">預先告知家屬「前兩週爬坡、第四週減壓」，能大幅提升服藥順從性。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p08：抗憂鬱劑分水嶺與光學異構物機轉解析 ==================== -->
+  <section class="k-slide" data-chapter="跨機轉新藥突破" data-title="抗憂鬱劑分水嶺與光學異構物機轉解析">
+    <header class="k-head">
+      <h2>抗憂鬱劑分水嶺與光學異構物機轉解析</h2>
+      <p class="k-sub">為何 Citalopram 有效而 Escitalopram 失敗？三大里程碑 RCT（CitAD・S-CitAD 2025・SYMBAD）對決</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g3" style="gap:22px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <div class="k-card sage" data-s="1" style="padding:20px 22px;border-top:10px solid #3F7A55;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <span class="k-badge sage">CitAD（Porsteinsson 2014 JAMA）</span>
+            <h3 style="margin-top:8px;font-size:28px;color:#3F7A55">Citalopram（R+S 消旋體）</h3>
+            <p style="font-size:20px;color:#5F6B77;margin-bottom:8px">N = 186｜9 週｜目標 30 mg/d + 心理社會介入</p>
+            <div style="background:#FFFFFF;border-radius:12px;padding:12px 14px;border:2px solid #3F7A55;margin-bottom:10px">
+              <p style="font-size:22px;font-weight:900;color:#3F7A55;margin:0">✔ 臨床顯著改善：40% vs 26%（p = 0.007）</p>
+              <p style="font-size:19px;margin:4px 0 0">NBRS-A −0.93（p = 0.04）｜CMAI −2.38（p = 0.008）</p>
+            </div>
+            <p style="font-size:20px;line-height:1.4"><strong>機轉優勢：</strong>R-鏡像異構物可能透過抗組織胺與調節 SERT 構型發揮獨特抗激動作用（且 R-體血中濃度較高的亞群療效更佳）。</p>
+          </div>
+          <div style="background:#FBEDE8;border-radius:10px;padding:10px 14px;border-left:6px solid #B5482F">
+            <p style="font-size:19px;font-weight:900;color:#B5482F;margin:0">⚠ 注意事項：QTc 延長 +18.1 ms（p = 0.004）、MMSE −1.05 分 → 60 歲以上每日上限 20 mg！</p>
+          </div>
+        </div>
+
+        <div class="k-card terra" data-s="2" style="padding:20px 22px;border-top:10px solid #B5482F;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <span class="k-badge terra">S-CitAD（Rajji 2025 Nature Medicine）</span>
+            <h3 style="margin-top:8px;font-size:28px;color:#B5482F">Escitalopram（純 S-異構物）</h3>
+            <p style="font-size:20px;color:#5F6B77;margin-bottom:8px">N = 392 納入 → 173 名非藥物無效者隨機分派｜12 週 15 mg/d</p>
+            <div style="background:#FFFFFF;border-radius:12px;padding:12px 14px;border:2px solid #B5482F;margin-bottom:10px">
+              <p style="font-size:22px;font-weight:900;color:#B5482F;margin:0">✘ 主要終點失敗：34.5% vs 27.0%（NS）</p>
+              <p style="font-size:19px;margin:4px 0 0">風險差 −0.08（95% CI −0.21 至 0.06），無統計顯著差異</p>
+            </div>
+            <p style="font-size:20px;line-height:1.4"><strong>機轉啟示：</strong>單純 S-citalopram 高選擇性抑制 SERT 無法複製消旋體 Citalopram 的抗激動效果，打破過去「立普能可完全取代喜普妙」的假設。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:10px;padding:10px 14px;border-left:6px solid #B5482F">
+            <p style="font-size:19px;font-weight:900;color:#B5482F;margin:0">⚠ 副作用仍增加：第 12 週 QTcB 仍延長 +10.8 ms（p = 0.003）、腹瀉 10.7% vs 2.2%、跌倒 14.3% vs 5.6%。</p>
+          </div>
+        </div>
+
+        <div class="k-card" data-s="3" style="padding:20px 22px;border-top:10px solid #5F6B77;display:flex;flex-direction:column;justify-content:space-between">
+          <div>
+            <span class="k-badge" style="background:#5F6B77">SYMBAD（Banerjee 2021 Lancet）</span>
+            <h3 style="margin-top:8px;font-size:28px;color:#1E2833">Mirtazapine（NaSSA 類）</h3>
+            <p style="font-size:20px;color:#5F6B77;margin-bottom:8px">N = 204｜12 週｜最高 45 mg/d vs 安慰劑</p>
+            <div style="background:#FFFFFF;border-radius:12px;padding:12px 14px;border:2px solid #5F6B77;margin-bottom:10px">
+              <p style="font-size:22px;font-weight:900;color:#B5482F;margin:0">✘ 完全無效：CMAI 差 −1.74（p = 0.530）</p>
+              <p style="font-size:19px;margin:4px 0 0">Zarit 照顧者負荷於第 12 週反而惡化 +5.01 分（p = 0.020）</p>
+            </div>
+            <p style="font-size:20px;line-height:1.4"><strong>機轉陷阱：</strong>阻斷突觸前 α2 自體受體雖促進正腎上腺素釋放，但在藍斑核退化、杏仁核 α1 高敏感之失智大腦反而無法平息激動，徒增 H1 日間嗜睡。</p>
+          </div>
+          <div style="background:#FBEDE8;border-radius:10px;padding:10px 14px;border-left:6px solid #B5482F">
+            <p style="font-size:19px;font-weight:900;color:#B5482F;margin:0">🚫 台灣 2026 共識列為 RG-T 4（不建議）：第 16 週死亡 7 例 vs 安慰劑 1 例（p = 0.065）。</p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take terra" data-s="4" style="margin-top:14px">抗憂鬱劑處方原則：若優先考量非抗精神病藥安全性，應選 Citalopram（10–20 mg/d）或 Agomelatine（12.5 mg/d，RG-T 1），勿用 Mirtazapine。</div>
+    </div>
+    <p class="k-cite">資料來源：Porsteinsson 2014 JAMA [PMID 24549548]；Rajji 2025 Nat Med [PMID 40133524]；Banerjee 2021 Lancet [PMID 34688369]；Cheng 2026 JCMA [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">當患者中風風險高、想優先選用抗憂鬱劑治療激動時，三項里程碑試驗徹底改寫了臨床決策。</p>
+      <p data-step="1">首先是二零一四年 JAMA 的 CitAD 試驗：消旋體 Citalopram 三十毫克顯著改善激動，反應率百分之四十比二十六；但因延長 QTc 十八點一毫秒，六十歲以上每日上限須控制在二十毫克。</p>
+      <p data-step="2">許多醫師改開純 S 異構物的 Escitalopram。然而二零二五年 Nature Medicine 的 S-CitAD 第三期試驗卻證實，Escitalopram 十五毫克反應率與安慰劑無統計差異，原因是少了 R 異構物的協同機轉，卻仍使 QTcB 延長十點八毫秒並增加跌倒。</p>
+      <p data-step="3">至於常在睡前開立的 Mirtazapine，Lancet 的 SYMBAD 試驗已證實對激動完全無效，反而惡化照顧者負荷。</p>
+      <p data-step="4">因此二零二六台灣共識將 Mirtazapine 列為第四級不建議使用；選用抗憂鬱劑應選 Citalopram 十到二十毫克或 Agomelatine 十二點五毫克。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p09：激動新興管線（AXS-05 與舌下 Dexmedetomidine 機轉圖解） ==================== -->
+  <section class="k-slide" data-chapter="跨機轉新藥突破" data-title="激動新管線：麩胺酸調控與急性舌下給藥">
+    <header class="k-head">
+      <h2>激動新管線：麩胺酸調控與急性舌下給藥</h2>
+      <p class="k-sub">跳脫單胺受體框架：AXS-05（口服維持與防復發）與 BXCL501（2 小時非注射急性救援）雙機轉圖解</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g2" style="gap:26px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <!-- 左：AXS-05 -->
+        <div class="k-panel navy" data-s="1" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #24476E">
+          <div>
+            <span class="k-badge">FDA 突破性療法｜AXS-05（Dextromethorphan-Bupropion）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#24476E">雙成分藥動與藥效協同機制圖</h3>
+            <div style="display:grid;grid-template-columns:0.88fr 0.14fr 1.28fr;gap:8px;align-items:stretch;margin:8px 0">
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #24476E;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:20px;color:#24476E;text-align:center">Bupropion</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#1E2833">1. <strong>強效抑制 CYP2D6</strong>，阻斷 DXM 快速代謝為 DXO。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">2. 提升 DXM 中樞生體可用率。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">3. 兼顧 NE / DA 再吸收抑制。</p>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#24476E">➔</div>
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #3F7A55;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:20px;color:#3F7A55;text-align:center">Dextromethorphan（中樞高濃度）</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#1E2833">• <strong>NMDA 非競爭性拮抗：</strong>平抑皮質麩胺酸興奮毒性。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">• <strong>Sigma-1（σ1）致效：</strong>調節鈣離子與突觸可塑性。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#24476E">• <strong>SERT / NET 調節 → 無 D2 阻斷、不傷認知。</strong></p>
+              </div>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border-left:8px solid #24476E" data-s="2">
+            <p style="font-size:19px;line-height:1.38;margin:0">
+              <strong>• ADVANCE-1（N = 366，5 週）：</strong>CMAI 降幅 <strong>−15.4</strong> vs Bupropion −10.0（p &lt; 0.001）與安慰劑 −11.5（<strong>p = 0.010</strong>）。<br>
+              <strong>• ACCORD-1（N = 108 隨機撤藥）：</strong>延緩復發 <strong>HR = 0.275（p = 0.014，風險降 3.6 倍）</strong>，復發率 <strong>7.5% vs 25.9%</strong>（ACCORD-2 亦達標 p = 0.001；ADVANCE-2 數值改善未達統計顯著）。
+            </p>
+          </div>
+        </div>
+
+        <!-- 右：BXCL501 -->
+        <div class="k-panel sage" data-s="3" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #3F7A55">
+          <div>
+            <span class="k-badge sage">急性發作非注射救援｜舌下 Dexmedetomidine（BXCL501）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#3F7A55">藍斑核突觸前 α2 受體負回饋降溫機制圖</h3>
+            <div style="display:grid;grid-template-columns:0.88fr 0.14fr 1.28fr;gap:8px;align-items:stretch;margin:8px 0">
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #3F7A55;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:20px;color:#3F7A55;text-align:center">舌下黏膜吸收</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#1E2833">1. 繞過肝臟首渡效應，快速起效。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#B5482F">2. <strong>免除肌肉注射疼痛與肢體約束。</strong></p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">3. 半衰期短（2–3 小時），適合 PRN 救援。</p>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:900;color:#3F7A55">➔</div>
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #24476E;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:20px;color:#24476E;text-align:center">腦幹藍斑核（Locus Coeruleus）</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#1E2833">• <strong>致效突觸前 α2A/2B/2C 自體受體</strong>。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#3F7A55">• <strong>啟動負回饋煞車 → 攔截正腎上腺素（NE）風暴。</strong></p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#B5482F">• <strong>產生「可喚醒之平靜狀態」，零肌張力不全。</strong></p>
+              </div>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border-left:8px solid #3F7A55" data-s="4">
+            <p style="font-size:19px;line-height:1.38;margin:0">
+              <strong>• TRANQUILITY II 第三期試驗（N = 149）：</strong>60 µg 舌下薄膜給藥後 <strong>2 小時 PEC 激動總分顯著下降 −7.5 vs 安慰劑 −5.4（p = 0.0112）</strong>，第 1 小時即開始起效。<br>
+              <strong>• 監測注意事項：</strong>嗜睡 16%（多為輕度）、低血壓 12%、心搏過緩 4% → 給藥後須監測血壓與脈搏。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take" data-s="4">管線啟示：AXS-05 開拓「非抗精神病藥之慢性防復發」，舌下 Dexmedetomidine 則有望取代急診 Haloperidol 肌肉注射。</div>
+    </div>
+    <p class="k-cite">資料來源：Imbimbo BP et al., CNS Drugs 2025;39(2):143–169, Table 1 &amp; Table 2 [PMID 39623197]；Smoller R et al., Drugs 2025, Table 1 [PMID 40913683]</p>
+    <template class="k-narr">
+      <p data-step="0">治療阿茲海默症激動還有兩條跳脫多巴胺框架的第三期新管線，分別解決「慢性防復發」與「急性救援」。</p>
+      <p data-step="1">左方是獲 FDA 突破性療法的口服複方 AXS-05，以 Bupropion 抑制肝臟 CYP2D6，讓右美沙芬在中樞達到高濃度，發揮拮抗 NMDA 麩胺酸受體與致效 Sigma-1 受體的協同作用。</p>
+      <p data-step="2">在 ADVANCE-1 試驗中，AXS-05 五週顯著降低 CMAI 十五點四分；在隨機撤藥試驗 ACCORD-1 中，更將激動復發風險降低三點六倍，復發率僅百分之七點五比二十五點九。</p>
+      <p data-step="3">右方則是急性舌下薄膜 Dexmedetomidine，代號 BXCL501。它繞過首渡效應，致效藍斑核突觸前 α2 自體受體，啟動負回饋攔截正腎上腺素風暴。</p>
+      <p data-step="4">TRANQUILITY II 證實六十微克舌下含服兩小時即顯著降低急性激動，帶來可喚醒的平靜狀態，但需注意百分之十二的低血壓與心搏過緩。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p10：失智症精神病非 D2 新世代（Pimavanserin 與 KarXT 機轉圖解） ==================== -->
+  <section class="k-slide" data-chapter="跨機轉新藥突破" data-title="失智症精神病邁向非多巴胺受體新世代">
+    <header class="k-head">
+      <h2>失智症精神病邁向非多巴胺受體新世代</h2>
+      <p class="k-sub">告別 D2 阻斷誘發之嚴重巴金森惡化：Pimavanserin（皮質 5-HT2A）與 KarXT（中樞 M1/M4 致效＋周邊保護罩）</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g2" style="gap:26px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <!-- 左：Pimavanserin HARMONY 全文 -->
+        <div class="k-panel" data-s="1" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #B5482F;background:var(--terra-wash)">
+          <div>
+            <span class="k-badge terra">HARMONY 第三期全文（Tariot 2021 NEJM，N = 392）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#B5482F">Pimavanserin：選擇性 5-HT2A 反向致效劑</h3>
+            <p style="font-size:19px;line-height:1.38;margin-bottom:8px">
+              <strong>作用機轉：</strong>專一結合視覺與額葉皮質過度活化的 <strong>5-HT2A 受體（反向致效）</strong>，對多巴胺 D2、組織胺 H1 與毒蕈鹼 M1 受體<strong>親和力為零</strong>。
+            </p>
+            <div class="k-metric-grid" style="margin:8px 0">
+              <div class="k-metric">
+                <p class="k-mlab">雙盲撤藥期復發率（N = 217）</p>
+                <p class="k-mval" style="color:#B5482F;font-size:40px">13% vs 28%</p>
+                <p class="k-mp">HR = 0.35（p = 0.005，提前達標）</p>
+              </div>
+              <div class="k-metric">
+                <p class="k-mlab">38 週全程認知與運動安全</p>
+                <p class="k-mval" style="color:#3F7A55;font-size:40px">零惡化</p>
+                <p class="k-mp">MMSE +1.2 分｜ESRS-A −0.9 分</p>
+              </div>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border-left:8px solid #B5482F" data-s="2">
+            <p style="font-size:19px;line-height:1.38;margin:0">
+              <strong>• 臨床定位與注意事項：</strong>開放期 12 週達 <strong>61.8% 持續反應（SAPS-H+D 降 75.2%）</strong>。因療效於<strong>帕金森氏病失智（PDD）與路易氏體失智（DLB）</strong>最顯著，是合併運動障礙者之首選機轉；惟須注意 <strong>QTcF 平均延長 +5.4 ms</strong>（次世代無 QTc 疑慮之 <strong>ACP-204</strong> 正進行第三期試驗）。
+            </p>
+          </div>
+        </div>
+
+        <!-- 右：KarXT 機轉圖 -->
+        <div class="k-panel" data-s="3" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #24476E;background:var(--navy-wash)">
+          <div>
+            <span class="k-badge">2024 FDA 核准新機轉｜KarXT（Xanomeline-Trospium）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#24476E">「中樞毒蕈鹼致效 ＋ 周邊抗膽鹼保護罩」機制圖</h3>
+            <div style="display:grid;grid-template-columns:1.25fr 0.16fr 0.92fr;gap:8px;align-items:stretch;margin:8px 0">
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #24476E;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:19px;color:#24476E;text-align:center">中樞神經（穿透 BBB）</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#3F7A55"><strong>Xanomeline（M1/M4 致效劑）</strong></p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">• 皮質 M1 活化 → 強化 GABA 抑制麩胺酸。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">• 紋狀體 M4 活化 → 調降多巴胺，<strong>不碰 D2 受體！</strong></p>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;border-left:3px dashed #B5482F;border-right:3px dashed #B5482F;padding:4px;background:#FBEDE8;border-radius:8px">
+                <span style="font-size:15px;font-weight:900;color:#B5482F;text-align:center;line-height:1.2">血腦<br>障壁<br>BBB</span>
+              </div>
+              <div style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border:3px solid #B5482F;display:flex;flex-direction:column;justify-content:space-between">
+                <strong style="font-size:19px;color:#B5482F;text-align:center">周邊器官（不過 BBB）</strong>
+                <p style="font-size:17px;line-height:1.36;margin:4px 0 0;color:#B5482F"><strong>Trospium（四級銨鹽）</strong></p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#1E2833">• 高極性無法穿透血腦障壁入腦。</p>
+                <p style="font-size:17px;line-height:1.36;margin:2px 0 0;color:#3F7A55">• 阻斷腸胃 M 受體 → <strong>抵銷噁心嘔吐與流涎。</strong></p>
+              </div>
+            </div>
+          </div>
+          <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border-left:8px solid #24476E" data-s="4">
+            <p style="font-size:19px;line-height:1.38;margin:0">
+              <strong>• 臨床驗證與 ADEPT 計畫：</strong>1997 年 Bodick 二期試驗即證實 Xanomeline 改善 AD 妄想幻覺與激動，當時因腸胃副作用擱置；加入 Trospium 後於 2024 年獲 FDA 核准（Cobenfy），目前正進行阿茲海默症精神病第三期 <strong>ADEPT-1（N = 380）與 ADEPT-2（N = 400）</strong>。
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take" data-s="4">精神病治療轉型：針對妄想幻覺，Pimavanserin（5-HT2A）與 KarXT（M1/M4）從上游調控迴路，徹底免除 D2 阻斷之運動與中風代價。</div>
+    </div>
+    <p class="k-cite">資料來源：Tariot PN et al., N Engl J Med 2021;385(4):309–319 [PMID 34289275]；Imbimbo BP et al., CNS Drugs 2025 [PMID 39623197]；Kaul I et al., Lancet 2024 [PMID 38104575]</p>
+    <template class="k-narr">
+      <p data-step="0">當失智患者出現被偷妄想或視幻覺，特別是路易氏體或帕金森失智，傳統 D2 阻斷劑極易引發嚴重僵硬跌倒。現在有兩大非 D2 新典範。</p>
+      <p data-step="1">左方是 NEJM 發表的 HARMONY 第三期試驗：Pimavanserin 專一反向致效皮質 5-HT2A 受體，零 D2 親和力。開放期逾六成患者持續緩解；雙盲撤藥期復發率僅百分之十三比二十八，風險比零點三五，且三十八週完全不傷認知與運動功能。</p>
+      <p data-step="2">因其在帕金森失智療效最顯著，且有五點四毫秒 QTcF 延長，無 QTc 疑慮的次世代 ACP-204 正進行三期試驗。</p>
+      <p data-step="3">右方是全新機轉 KarXT：結合穿過血腦障壁致效中樞 M1、M4 受體的 Xanomeline，以及不過血腦障壁的四級銨鹽 Trospium 當周邊保護罩，抵銷腸胃嘔吐副作用。</p>
+      <p data-step="4">KarXT 已於二零二四年獲 FDA 核准，目前阿茲海默症精神病第三期 ADEPT-1 與 ADEPT-2 正全面推進。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p11：睡眠覺醒障礙（Suvorexant）與冷漠症（ADMET 2）機轉圖解 ==================== -->
+  <section class="k-slide" data-chapter="跨機轉新藥突破" data-title="睡眠覺醒障礙與冷漠症的靶向機轉突破">
+    <header class="k-head">
+      <h2>睡眠覺醒障礙與冷漠症的靶向機轉突破</h2>
+      <p class="k-sub">失眠不靠 BZD 強行鎮靜（Suvorexant 雙重食慾素拮抗）；冷漠不靠 SSRI（Methylphenidate 活化動機迴路）</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g2" style="gap:26px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <!-- 左：Suvorexant -->
+        <div class="k-panel sage" data-s="1" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #3F7A55">
+          <div>
+            <span class="k-badge sage">阿茲海默症失眠第三期 PSG 試驗（Herring 2020，N = 285）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#3F7A55">Suvorexant：雙重食慾素受體拮抗劑（DORA）</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0">
+              <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border:2px solid #B5482F">
+                <strong style="font-size:18px;color:#B5482F">✘ 傳統 BZD / Z-drugs 陷阱</strong>
+                <p style="font-size:17px;line-height:1.34;margin:4px 0 0;color:#1E2833">全腦 GABAA 強行鎮靜 → <strong>誘發夜間譫妄、反彈日落激動與跌倒骨折</strong>，破壞睡眠結構。</p>
+              </div>
+              <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border:2px solid #3F7A55">
+                <strong style="font-size:18px;color:#3F7A55">✔ Suvorexant（10–20 mg）機轉</strong>
+                <p style="font-size:17px;line-height:1.34;margin:4px 0 0;color:#1E2833">可逆阻斷下視丘 <strong>OX1R / OX2R 促醒訊號</strong> → 保留生理睡眠結構，<strong>隔日 MMSE 零惡化</strong>。</p>
+              </div>
+            </div>
+          </div>
+          <div class="k-metric-grid" style="margin:6px 0" data-s="2">
+            <div class="k-metric">
+              <p class="k-mlab">總睡眠時間（TST）組間淨增加</p>
+              <p class="k-mval" style="color:#3F7A55;font-size:38px">+28.2 分鐘</p>
+              <p class="k-mp">+73.4 vs +45.2 分（p = 0.001）</p>
+            </div>
+            <div class="k-metric">
+              <p class="k-mlab">入睡後清醒（WASO）組間減少</p>
+              <p class="k-mval" style="color:#24476E;font-size:38px">−15.7 分鐘</p>
+              <p class="k-mp">後半夜改善最顯著（p = 0.014）</p>
+            </div>
+          </div>
+          <p data-s="2" style="font-size:18px;margin:0;color:#1E2833"><strong>臨床價值：</strong>睡眠增加 ≥50 分鐘比例達 <strong>62% vs 45%（OR = 2.2，p = 0.002）</strong>，嗜睡僅 4.2%，已正式寫入美國 FDA 仿單。</p>
+        </div>
+
+        <!-- 右：ADMET 2 Methylphenidate -->
+        <div class="k-panel butter" data-s="3" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;border-top:10px solid #D99B26">
+          <div>
+            <span class="k-badge butter">ADMET 2 第三期 RCT（Mintzer 2021 JAMA Neurol，N = 200）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#9A5B13">Methylphenidate：重啟前額葉－紋狀體動機迴路</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:8px 0">
+              <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border:2px solid #9A5B13">
+                <strong style="font-size:18px;color:#9A5B13">✘ 冷漠症常被誤診為憂鬱</strong>
+                <p style="font-size:17px;line-height:1.34;margin:4px 0 0;color:#1E2833">病灶為 ACC－紋狀體多巴胺斷聯；<strong>誤開 SSRI 完全無效且常加重冷漠</strong>。</p>
+              </div>
+              <div style="background:#FFFFFF;border-radius:12px;padding:10px 14px;border:2px solid #24476E">
+                <strong style="font-size:18px;color:#24476E">✔ Methylphenidate（10 mg BID）</strong>
+                <p style="font-size:17px;line-height:1.34;margin:4px 0 0;color:#1E2833">阻斷 DAT / NET 提升突觸間隙 <strong>DA / NE 動機訊號</strong>；6 個月<strong>未誘發激動或妄想</strong>。</p>
+              </div>
+            </div>
+          </div>
+          <div class="k-metric-grid" style="margin:6px 0" data-s="4">
+            <div class="k-metric">
+              <p class="k-mlab">6 個月 NPI 冷漠分數組間差</p>
+              <p class="k-mval" style="color:#9A5B13;font-size:38px">−1.25 分</p>
+              <p class="k-mp">p = 0.002（Cohen's d = 0.415）</p>
+            </div>
+            <div class="k-metric">
+              <p class="k-mlab">達成冷漠完全緩解（NPI = 0）</p>
+              <p class="k-mval" style="color:#3F7A55;font-size:38px">HR = 2.16</p>
+              <p class="k-mp">95% CI 1.19–3.91（p = 0.01）</p>
+            </div>
+          </div>
+          <p data-s="4" style="font-size:18px;margin:0;color:#1E2833"><strong>注意事項：</strong>前 100 天起效最快；用藥期間須定期量測<strong>體重與血壓</strong>（體重減輕 &gt;7% 比例為 10% vs 安慰劑 6%）。</p>
+        </div>
+      </div>
+      <div class="k-take sage" data-s="4">跨症狀處方準則：失智合併失眠優先以 DORA（Suvorexant）取代 BZD；單純重度冷漠應先停用不必要之鎮靜藥或 SSRI，再評估低劑量 Methylphenidate。</div>
+    </div>
+    <p class="k-cite">資料來源：Herring WJ et al., Alzheimers Dement 2020;16(3):541–551 [PMID 31944580]；Mintzer J et al., JAMA Neurol 2021;78(11):1324–1332 [PMID 34570180]</p>
+    <template class="k-narr">
+      <p data-step="0">失智長者最常讓家屬精疲力竭的還有半夜不睡與白天嚴重冷漠，這兩者同樣有第三期靶向藥物突破。</p>
+      <p data-step="1">左方是失眠與日落症候群：傳統苯二氮平類全腦抑制極易誘發譫妄與跌倒；雙重食慾素受體拮抗劑 Suvorexant 則是精準關閉下視丘過度活化的促醒開關。</p>
+      <p data-step="2">在兩百八十五名阿茲海默症失眠患者的睡眠檢查試驗中，Suvorexant 十到二十毫克讓總睡眠時間淨增加二十八點二分鐘，後半夜清醒減少十五點七分鐘，且隔天早上 MMSE 零惡化。</p>
+      <p data-step="3">右方是冷漠症：源於前扣帶迴與紋狀體多巴胺斷聯，誤開 SSRI 反而會加重冷漠。</p>
+      <p data-step="4">JAMA Neurology 發表的 ADMET 2 試驗顯示，每日兩次十毫克 Methylphenidate 顯著降低 NPI 冷漠分數一點二五分，完全緩解率提升二點一六倍，不誘發激動妄想，只需追蹤血壓與體重。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p12：2026 台灣專家共識推薦等級與七大安全面向決策矩陣 ==================== -->
+  <section class="k-slide" data-chapter="臨床決策與監測" data-title="台灣共識推薦等級與七大安全面向評比">
+    <header class="k-head">
+      <h2>台灣共識推薦等級與七大安全面向評比</h2>
+      <p class="k-sub">2026 台灣專家共識（Cheng 2026 Table 3 &amp; Fig 1）：整合實證等級（LoE）、衛福部適應症與五大安全面向</p>
+    </header>
+    <div class="k-body">
+      <table class="k-tb sm" style="font-size:21px;margin-bottom:14px">
+        <thead>
+          <tr>
+            <th>推薦分級（RG-T）</th>
+            <th>藥物名稱</th>
+            <th>實證（LoE）</th>
+            <th>衛福部核准</th>
+            <th>成人建議每日劑量</th>
+            <th>五大安全面向與臨床決策定位（Cheng 2026 Fig 1）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hl" data-s="1">
+            <td class="b" style="color:#3F7A55">RG-T 1（強烈推薦）</td>
+            <td class="b" style="color:#24476E">Brexpiprazole</td>
+            <td class="b">A</td>
+            <td class="b" style="color:#3F7A55">✔ 正式核准</td>
+            <td class="b">1–3 mg/d（目標 2–3 mg）</td>
+            <td><strong>首選藥物：</strong>療效與耐受性最佳平衡；低 EPS、低鎮靜、低跌倒、低中風風險</td>
+          </tr>
+          <tr data-s="1">
+            <td class="b" style="color:#3F7A55">RG-T 1（強烈推薦）</td>
+            <td class="b">Aripiprazole</td>
+            <td class="b">A</td>
+            <td>適應症外</td>
+            <td>2–10 mg/d</td>
+            <td>療效相當於 Risperidone，低鎮靜與低代謝／中風風險；需共享決策並留意靜坐不能</td>
+          </tr>
+          <tr data-s="2">
+            <td class="b" style="color:#3F7A55">RG-T 1（強烈推薦）</td>
+            <td class="b">Citalopram / Agomelatine</td>
+            <td class="b">B</td>
+            <td>適應症外</td>
+            <td>Cit 10–20 mg｜Ago 12.5 mg</td>
+            <td><strong>安全優先首選：</strong>中風或巴金森高危不想用抗精神病藥時之首選（避開 Escitalopram）</td>
+          </tr>
+          <tr data-s="3">
+            <td class="b" style="color:#24476E">RG-T 2（有限推薦）</td>
+            <td class="b">Risperidone</td>
+            <td class="b">A</td>
+            <td class="b" style="color:#3F7A55">✔ 正式核准</td>
+            <td>0.25–1 mg BID</td>
+            <td>療效強（LoE A），但因 <strong>EPS、腦中風與下肢水腫風險較高</strong>，共識降為第二線</td>
+          </tr>
+          <tr data-s="3">
+            <td class="b" style="color:#24476E">RG-T 2（有限推薦）</td>
+            <td class="b">Quetiapine</td>
+            <td class="b">C1</td>
+            <td>適應症外</td>
+            <td>25–400 mg/d（常 12.5–100）</td>
+            <td>RCT 療效不一致，但因<strong>低 EPS 與低中風風險</strong>，於虛弱或巴金森共病者升級為 RG-T 2</td>
+          </tr>
+          <tr data-s="4">
+            <td class="b" style="color:#9A5B13">RG-T 3（微弱推薦）</td>
+            <td>Olanzapine / Haloperidol / 抗癲癇藥 / Trazodone</td>
+            <td>C1–C3</td>
+            <td>Haloperidol ✔</td>
+            <td>Olz 2.5–5 mg｜Hal 0.5–2 mg IM</td>
+            <td>Haloperidol 僅限急性緊急肌注；Carbamazepine 難治型可用但<strong>台灣必先驗 HLA-B*1502</strong></td>
+          </tr>
+          <tr data-s="4" style="background:#FBEDE8">
+            <td class="b" style="color:#B5482F">RG-T 4（不建議）</td>
+            <td class="b" style="color:#B5482F">Mirtazapine / Oxcarbazepine</td>
+            <td class="b" style="color:#B5482F">D</td>
+            <td>無</td>
+            <td>不建議用於失智症激動</td>
+            <td>SYMBAD 與臨床試驗證明無效且增加負面風險，<strong>常規不建議開立</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="k-take" data-s="4">台灣共識選藥口訣：中重度激動首選 Brexpiprazole（RG-T 1）；輕中度或忌憚抗精神病藥風險者選 Citalopram / Agomelatine（RG-T 1）。</div>
+    </div>
+    <p class="k-cite">資料來源：Cheng YC et al., J Chin Med Assoc 2026;89(2):99–111, Table 1, Table 3 &amp; Fig 1 [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">匯總所有實證，二零二六年台灣專家共識依證據等級、安全性與衛福部適應症，將激動用藥分為四級。</p>
+      <p data-step="1">第一級強烈推薦包含四種藥：首選是具 A 級實證與衛福部適應症的 Brexpiprazole，在錐體外徑、鎮靜、跌倒、代謝與中風五大安全面向最均衡；Aripiprazole 同列第一級，但屬適應症外使用。</p>
+      <p data-step="2">若患者腦血管風險高、優先考量非抗精神病藥，第一級推薦還有 Citalopram 十到二十毫克與 Agomelatine 十二點五毫克。</p>
+      <p data-step="3">第二級有限推薦呈現重要對比：Risperidone 雖有 A 級實證與適應症，但因中風與 EPS 風險降為第二級；Quetiapine 雖僅 C1 證據，卻因低 EPS 與低中風風險升級為第二級。</p>
+      <p data-step="4">第三級僅限難治情境，如用 Carbamazepine 前必驗 HLA-B 1502；Mirtazapine 則列第四級不建議使用。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p13：四大失智亞型個體化選藥決策樹（互動切換分頁） ==================== -->
+  <section class="k-slide" data-chapter="臨床決策與監測" data-title="四大失智亞型與臨床表型個體化選藥指引">
+    <header class="k-head">
+      <h2>四大失智亞型與臨床表型個體化選藥指引</h2>
+      <p class="k-sub">點選上方失智亞型分頁切換臨床決策樹（Cheng 2026 §3.4）：不同病理亞型有截然不同的首選與禁忌</p>
+    </header>
+    <div class="k-body">
+      <div class="k-tabs">
+        <button data-step-btn="1">1. 阿茲海默症（AD）</button>
+        <button data-step-btn="2">2. 路易氏體／帕金森失智（DLB / PDD）</button>
+        <button data-step-btn="3">3. 額顳葉失智症（FTD）</button>
+        <button data-step-btn="4">4. 血管性與混合型失智（VaD）</button>
+      </div>
+
+      <!-- Tab 1: AD -->
+      <div class="k-panel navy" data-s="1" data-sto="1" style="padding:24px 28px;flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span class="k-badge">阿茲海默症（Alzheimer's Disease）｜實證最完整之標準路徑</span>
+          <h3 style="margin-top:10px;font-size:32px;color:#24476E">依「症狀嚴重度 × 心血管／QTc 共病」雙軸分流決策</h3>
+        </div>
+        <div class="k-g3" style="gap:20px;margin:14px 0">
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #3F7A55">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#3F7A55">中重度激動／合併妄想幻覺</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0"><strong>首選：Brexpiprazole（1–3 mg/d，RG-T 1）</strong>或 Aripiprazole（2–10 mg/d）。Tariot 2026 證實合併精神病亞群 CMAI 降幅達 −9.18（d = 0.52）。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #24476E">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#24476E">輕中度激動／高腦血管風險</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0"><strong>首選：Citalopram（10–20 mg/d，RG-T 1）</strong>或 <strong>Agomelatine（12.5 mg/d，RG-T 1）</strong>。開立 Citalopram 前必驗基線 ECG QTc 與血鈉。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #D99B26">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#9A5B13">合併失眠日落或單純重度冷漠</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0"><strong>失眠：</strong>Suvorexant 10–20 mg 睡前（延長睡眠 +28.2 分鐘）。<br><strong>冷漠：</strong>Methylphenidate 5–10 mg BID（ADMET 2）。</p>
+          </div>
+        </div>
+        <p style="font-size:21px;margin:0;color:#B5482F;font-weight:900">⚠ 避免事項：AChEI 與 Memantine 對已發作之急性激動療效有限（RG-T 3），不作為急性抗激動單一處方。</p>
+      </div>
+
+      <!-- Tab 2: DLB / PDD -->
+      <div class="k-panel terra" data-s="2" data-sto="2" style="padding:24px 28px;flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span class="k-badge terra">路易氏體失智／帕金森氏病失智（DLB / PDD）｜極度抗精神病藥敏感性</span>
+          <h3 style="margin-top:10px;font-size:32px;color:#B5482F">最高警戒：高達 50% 對強效 D2 阻斷產生嚴重錐體外徑與自主神經崩潰</h3>
+        </div>
+        <div class="k-g3" style="gap:20px;margin:14px 0">
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #B5482F">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#B5482F">🚫 絕對與相對禁忌</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0"><strong>嚴禁 Haloperidol 與高劑量 Risperidone / Olanzapine</strong>（易誘發急性運動不能危機、惡性症候群與重度嗜睡跌倒）。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #3F7A55">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#3F7A55">✔ 基礎首選：膽鹼酯酶抑制劑</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">DLB/PDD 具嚴重皮質乙醯膽鹼缺失，<strong>Rivastigmine 或 Donepezil</strong> 對視幻覺與認知波動具廣泛改善效益，應優先用足。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #24476E">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#24476E">✔ 必要時之抗精神病／激動藥</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">精神病首選 <strong>Pimavanserin（HARMONY HR 0.35，零 D2 阻斷）</strong>；激動首選極低劑量 <strong>Quetiapine（12.5–50 mg）</strong>，D2 部分致效劑須極低劑量審慎監測。</p>
+          </div>
+        </div>
+        <p style="font-size:21px;margin:0;color:#1E2833;font-weight:900">💡 監測重點：起始劑量減半，密切追蹤帕金森步態、姿勢性低血壓、意識混亂與 QTc 間期。</p>
+      </div>
+
+      <!-- Tab 3: FTD -->
+      <div class="k-panel sage" data-s="3" data-sto="3" style="padding:24px 28px;flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span class="k-badge sage">額顳葉失智症（Frontotemporal Dementia）｜核心為血清素迴路缺失</span>
+          <h3 style="margin-top:10px;font-size:32px;color:#3F7A55">去抑制（Disinhibition）、衝動、強迫行為與甜食渴求之靶向處置</h3>
+        </div>
+        <div class="k-g3" style="gap:20px;margin:14px 0">
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #3F7A55">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#3F7A55">✔ 第一線首選：SSRIs</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">FTD 額葉突觸血清素顯著流失，<strong>Citalopram（10–20 mg/d）或 Sertraline（50–100 mg/d）</strong>能有效減少易怒、衝動脫序與強迫重複行為。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #24476E">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#24476E">✔ 第二線選擇：Trazodone</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">交叉 RCT 證實 <strong>Trazodone（150–300 mg/d）</strong>能顯著改善 FTD 之激動、暴食與負向抗拒行為（須注意鎮靜與姿勢性低血壓）。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #B5482F">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#B5482F">⚠ 避開 AChEI 與常規抗精神病藥</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0"><strong>膽鹼酯酶抑制劑（Donepezil 等）可能加重 FTD 激動與焦躁</strong>；FTD 亦對 D2 阻斷敏感，抗精神病藥僅限嚴重危險時最低劑量短期使用。</p>
+          </div>
+        </div>
+        <p style="font-size:21px;margin:0;color:#3F7A55;font-weight:900">💡 臨床要訣：遇到早發性失智合併脫序行為，先補血清素（SSRI / Trazodone），切勿直接給予膽鹼酯酶抑制劑。</p>
+      </div>
+
+      <!-- Tab 4: VaD -->
+      <div class="k-panel butter" data-s="4" style="padding:24px 28px;flex:1 1 auto;display:flex;flex-direction:column;justify-content:space-between">
+        <div>
+          <span class="k-badge butter">血管性失智與混合型失智（VaD / Mixed）｜腦血管事件最高風險群</span>
+          <h3 style="margin-top:10px;font-size:32px;color:#9A5B13">基線已有腦白質病變、腔隙性梗塞或微出血，中風防範為第一優先</h3>
+        </div>
+        <div class="k-g3" style="gap:20px;margin:14px 0">
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #B5482F">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#B5482F">🚫 避開高腦血管風險藥物</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">網路統合分析顯示 <strong>Risperidone 與 Olanzapine 之腦血管不良事件（CVA）風險較高</strong>，於血管性失智患者應盡量避免。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #3F7A55">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#3F7A55">✔ 優先選擇：SSRI 或低中風風險藥</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">優先選用 <strong>Citalopram / Sertraline</strong>（但併用抗血小板藥時須監測胃腸道出血）或腦血管風險較低之 <strong>Brexpiprazole / Aripiprazole / Quetiapine</strong>。</p>
+          </div>
+          <div style="background:#FFFFFF;border-radius:16px;padding:18px 20px;border-top:8px solid #24476E">
+            <h4 style="margin:0 0 8px;font-size:24px;color:#24476E">✔ 血壓與早期減藥管理</h4>
+            <p style="font-size:21px;line-height:1.42;margin:0">嚴密監測姿勢性低血壓與腦灌流不足；症狀穩定後應<strong>盡早啟動階梯減藥（Tapering）</strong>，減少長期血管暴露。</p>
+          </div>
+        </div>
+        <p style="font-size:21px;margin:0;color:#9A5B13;font-weight:900">💡 藥物交互作用提醒：VaD 患者常服用 Aspirin 或 Clopidogrel，併用 SSRI 時可考慮搭配胃黏膜保護劑或 PPI。</p>
+      </div>
+
+      <div class="k-take" data-s="4" style="margin-top:12px">亞型個體化口訣：AD 首選 Brexpiprazole / Citalopram；DLB 避 D2 選 Quetiapine / Pimavanserin；FTD 補血清素避 AChEI；VaD 嚴防中風與出血。</div>
+    </div>
+    <p class="k-cite">資料來源：Cheng YC et al., J Chin Med Assoc 2026;89(2):99–111, §3.4 Subtype-specific considerations [PMID 41527161]；Tariot PN et al., NEJM 2021 [PMID 34289275]</p>
+    <template class="k-narr">
+      <p data-step="0">門診臨床決策不能只看症狀，還必須看「失智症亞型」。我們透過上方分頁掌握四大亞型選藥指引。</p>
+      <p data-step="1">第一，阿茲海默症：中重度激動或合併妄想幻覺首選 Brexpiprazole 或 Aripiprazole；輕中度或高血管風險則選 Citalopram 或 Agomelatine。</p>
+      <p data-step="2">第二，路易氏體與帕金森失智：對 D2 阻斷極度敏感，嚴禁 Haloperidol。基礎先用足膽鹼酯酶抑制劑；精神病首選 Pimavanserin 或極低劑量 Quetiapine。</p>
+      <p data-step="3">第三，額顳葉失智症：核心為額葉血清素缺失，首選 SSRI 或 Trazodone；切忌加量膽鹼酯酶抑制劑，否則反會加重焦躁。</p>
+      <p data-step="4">第四，血管性失智：應避開中風風險較高的 Risperidone 與 Olanzapine；併用 SSRI 與抗血小板藥時須防胃腸出血。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p14：處方執行注意事項與前 12 週黃金安全監測窗 ==================== -->
+  <section class="k-slide" data-chapter="臨床決策與監測" data-title="處方執行注意事項與前十二週黃金監測窗">
+    <header class="k-head">
+      <h2>處方執行注意事項與前十二週黃金監測窗</h2>
+      <p class="k-sub">統合 N = 1,043 安全性時間窗分析（Shah 2025、Porsteinsson 2026）與主力藥物處方必檢清單</p>
+    </header>
+    <div class="k-body">
+      <div class="k-g2" style="grid-template-columns:0.98fr 1.02fr;gap:26px;flex:1 1 auto;min-height:0;align-items:stretch">
+        <!-- 左：Porsteinsson 2026 時間窗資訊圖 -->
+        <div class="k-panel" data-s="1" style="padding:18px 22px;display:flex;flex-direction:column;justify-content:space-between;background:var(--navy-wash)">
+          <div>
+            <span class="k-badge">Brexpiprazole 統合安全性（Shah 2025 / Porsteinsson 2026）</span>
+            <h3 style="margin-top:6px;font-size:26px;color:#24476E">不良事件發生時間點與持續天數圖解（N = 1,043）</h3>
+          </div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:6px 0">
+            <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border:3px solid #B5482F">
+              <strong style="font-size:20px;color:#B5482F">前 12 週：黃金監測期（雙盲期）</strong>
+              <p style="font-size:17px;line-height:1.38;margin:6px 0 0;color:#1E2833">
+                • 首次 TEAE 中位發生日：<strong style="color:#B5482F">第 32 天</strong>（安慰劑 28 天）。<br>
+                • TEAE 中位持續天數：<strong style="color:#24476E">僅 6 天</strong>（多輕中度短暫）。<br>
+                • 唯一 ≥5% 為頭痛（7.6% vs 9.3%）；嗜睡 3.7%、EPS 5.3%。
+              </p>
+            </div>
+            <div style="background:#FFFFFF;border-radius:14px;padding:12px 16px;border:3px solid #3F7A55">
+              <strong style="font-size:20px;color:#3F7A55">第 12–24 週：延伸穩定期（N = 259）</strong>
+              <p style="font-size:17px;line-height:1.38;margin:6px 0 0;color:#1E2833">
+                • <strong style="color:#3F7A55">前 12 週無副作用者，後續極少新發 AESI！</strong><br>
+                • 腦血管事件 CVA 0.5% vs 0.3%（與安慰劑相當）。<br>
+                • 第 12 與 24 週 MMSE 維持穩定（+0.2 / −0.3）。
+              </p>
+            </div>
+          </div>
+          <div style="background:#24476E;border-radius:12px;padding:10px 14px;text-align:center;color:#FFFFFF">
+            <p style="font-size:18px;font-weight:900;margin:0;color:#F3C84B">標準滴定：第 1–7 天 0.5 mg/d ➔ 第 8–14 天 1 mg/d ➔ 第 15 天起 2 mg/d（視反應最高 3 mg/d）</p>
+          </div>
+          <p data-s="2" style="font-size:18px;line-height:1.36;margin:0;background:#FFFFFF;padding:10px 14px;border-radius:10px;border-left:6px solid #B5482F">
+            <strong>死亡率透明揭露：</strong>12 週雙盲期死亡率 Brexpiprazole <strong>0.9%（6/655）vs 安慰劑 0.3%（1/388）</strong>，雖試驗主持人皆判定與藥物無關，仍須依黑框警語向家屬完整說明。
+          </p>
+        </div>
+
+        <!-- 右：臨床處方注意事項與交互作用清單 -->
+        <div class="k-col" style="justify-content:space-between;gap:12px">
+          <div class="k-card" data-s="2" style="padding:14px 20px;border-left:8px solid #24476E">
+            <h3 style="font-size:23px;color:#24476E;margin-bottom:4px">1. Brexpiprazole 代謝與劑量調整注意事項</h3>
+            <p style="font-size:19px;line-height:1.38">經肝臟 <strong>CYP2D6 與 CYP3A4</strong> 代謝：若併用強效 CYP2D6 抑制劑（如 Paroxetine、Fluoxetine、Bupropion）或強效 CYP3A4 抑制劑（Clarithromycin），或中重度肝腎功能不全，<strong>目標劑量應減半</strong>。</p>
+          </div>
+          <div class="k-card terra" data-s="3" style="padding:14px 20px;border-left:8px solid #B5482F">
+            <h3 style="font-size:23px;color:#B5482F;margin-bottom:4px">2. Citalopram / SSRI 三大安全紅線（QTc・低血鈉・出血）</h3>
+            <p style="font-size:19px;line-height:1.38">• <strong>60 歲以上每日上限 20 mg</strong>；基線與增量後必查 ECG（QTc &gt; 450–470 ms 避免使用）。<br>• 用藥第 2–4 週必查<strong>血鈉（防 SIADH 低血鈉致跌倒譫妄）</strong>；併用 Aspirin / NSAID / 抗凝血劑須防胃腸出血。</p>
+          </div>
+          <div class="k-card sage" data-s="4" style="padding:14px 20px;border-left:8px solid #3F7A55">
+            <h3 style="font-size:23px;color:#3F7A55;margin-bottom:4px">3. Risperidone 與抗癲癇藥特殊注意事項（台灣在地規範）</h3>
+            <p style="font-size:19px;line-height:1.38">• <strong>Risperidone：</strong>除監測 EPS 與腦中風外，台灣共識特別提醒追蹤<strong>下肢水腫（Lower-extremity edema）</strong>，出現時應減量或停藥。<br>• <strong>Carbamazepine：</strong>啟動前<strong>強制檢驗 HLA-B*1502 基因型</strong>（防 SJS/TEN），並留意酵素誘導降低他藥濃度。</p>
+          </div>
+        </div>
+      </div>
+      <div class="k-take" data-s="4">安全監測口訣：首月每週查步態與血壓、前 12 週抓緊黃金監測窗；開 SSRI 必看 QTc 與血鈉、開癲通必驗 HLA-B*1502。</div>
+    </div>
+    <p class="k-cite">資料來源：Shah A et al., Am J Geriatr Psychiatry 2025 [PMID 40681915]；Porsteinsson AP et al., CNS Spectr 2026 [PMID 41961243]；Cheng YC et al., JCMA 2026 [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">決定處方後，安全監測有哪些必守注意事項？左方是 Shah 與 Porsteinsson 針對一千零四十三名患者的統合安全性分析。</p>
+      <p data-step="1">Brexpiprazole 首次不良事件中位發生在第三十二天，中位持續僅六天；關鍵發現是：若前十二週無副作用，後續十二到二十四週延伸期也極少新發不良事件。因此「前十二週」就是黃金監測窗。</p>
+      <p data-step="2">劑量須依零點五、一、兩毫克逐週慢速滴定；若併用 Fluoxetine 或 Paroxetine 等強效 CYP2D6 抑制劑，劑量須減半。十二週雙盲期死亡率百分之零點九比零點三，應向家屬透明說明。</p>
+      <p data-step="3">開立 Citalopram 必守三大紅線：六十歲以上上限二十毫克、監測 QTc，以及用藥二到四週驗血鈉防低血鈉跌倒。</p>
+      <p data-step="4">台灣共識也提醒用 Risperidone 需檢查下肢水腫；用 Carbamazepine 前必先檢驗 HLA-B 1502 基因型。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p15：臨床情境互動決策頁 ==================== -->
+  <section class="k-slide" data-chapter="情境與減藥停藥" data-title="臨床情境：合併心電圖異常時如何選藥">
+    <header class="k-head">
+      <h2>臨床情境：合併心電圖異常時如何選藥</h2>
+      <p class="k-sub">點選右側四個處方選項檢視最新實證解析（自動播放模式將依序揭曉）</p>
+    </header>
+    <div class="k-body">
+      <div class="k-case-wrap">
+        <div class="k-vignette">
+          <div>
+            <span class="k-badge">門診真實決策情境</span>
+            <h3 style="margin-top:10px">78 歲男性｜中度阿茲海默症（MMSE 15 分）</h3>
+            <p style="margin-top:10px">過去兩個月每逢傍晚即抗拒洗澡、咆哮並推打外籍看護（CMAI 68 分）。已執行 3 週結構化非藥物環境調整與音樂減壓，但攻擊行為仍每週發作 4–5 次。</p>
+          </div>
+          <div class="k-vitals" data-s="1">
+            <div class="k-vital">
+              <b>心電圖檢查（ECG）</b>
+              <span>QTc 延長為 468 ms</span>
+            </div>
+            <div class="k-vital">
+              <b>神經學理學檢查</b>
+              <span>輕微小碎步與齒輪樣僵硬</span>
+            </div>
+          </div>
+          <p data-s="1" style="font-size:21px;color:#3B4754;background:#FFFFFF;padding:12px 16px;border-radius:12px">
+            <strong>處方挑戰：</strong>感染、疼痛與電解質異常皆已排除（完成 ABC 步驟）。此時進入 D（Decision to medicate），哪一項處方最符合 2025–2026 實證？
+          </p>
+        </div>
+        <div class="k-case-opts">
+          <button class="k-opt bad" data-reveal="2">
+            <span class="k-letter">A</span>
+            <div>
+              <span class="k-say">開立 Escitalopram 10–15 mg/d（認為比 Citalopram 更安全有效）</span>
+              <p class="k-fb"><strong style="color:#B5482F">✘ 實證不符：</strong>2025 年 <em>Nature Medicine</em> 發表之 <strong>S-CitAD 第三期試驗（N = 173）</strong>證實 Escitalopram 對阿茲海默症激動<strong>無顯著療效（反應率 34.5% vs 安慰劑 27.0%）</strong>，且仍使 QTcB 延長 +10.8 ms 並增加跌倒風險，不適用於 QTc 468 ms 患者。</p>
+            </div>
+          </button>
+          <button class="k-opt bad" data-reveal="3">
+            <span class="k-letter">B</span>
+            <div>
+              <span class="k-say">睡前給予 Mirtazapine 15–30 mg/d 助眠並安撫情緒</span>
+              <p class="k-fb"><strong style="color:#B5482F">✘ 指引反對：</strong><em>Lancet</em> <strong>SYMBAD 試驗（N = 204）</strong>證實 Mirtazapine 完全無效（CMAI 差 −1.74，p = 0.53），反而增加照顧者負荷與第 16 週死亡趨勢（7 vs 1 例）；<strong>2026 台灣專家共識列為 RG-T 4（不建議使用）</strong>。</p>
+            </div>
+          </button>
+          <button class="k-opt bad" data-reveal="3">
+            <span class="k-letter">C</span>
+            <div>
+              <span class="k-say">開立 Risperidone 1 mg BID 或 Haloperidol 口服滴劑快速壓制</span>
+              <p class="k-fb"><strong style="color:#B5482F">✘ 高危處方：</strong>患者已具輕微巴金森氏症步態特徵，強效 D2 阻斷劑極易誘發嚴重錐體外徑症狀（EPS）與跌倒骨折，且 180 天死亡 NNH 僅 26–27。</p>
+            </div>
+          </button>
+          <button class="k-opt good" data-reveal="4">
+            <span class="k-letter">D</span>
+            <div>
+              <span class="k-say">啟動 Brexpiprazole 標準滴定（0.5 mg → 1 mg → 目標 2 mg/d）</span>
+              <p class="k-fb"><strong style="color:#3F7A55">✔ 最佳實證決策：</strong>衛福部核准適應症、<strong>2026 台灣共識 RG-T 1 強烈推薦（LoE A）</strong>。臨床劑量不延長 QTc，D2 部分致效對巴金森症狀負擔低；搭配首月每週檢視安全性（STEP），滿 4 週評估療效。</p>
+            </div>
+          </button>
+        </div>
+      </div>
+      <div class="k-take sage" data-s="4">臨床決策要訣：合併 QTc 延長時避開 Citalopram / Escitalopram；合併巴金森特徵時避開強效 D2 拮抗劑。</div>
+    </div>
+    <p class="k-cite">資料來源：Rajji TK et al., Nat Med 2025 [PMID 40133524]；Banerjee S et al., Lancet 2021 [PMID 34688369]；Cheng YC et al., JCMA 2026 [PMID 41527161]</p>
+    <template class="k-narr">
+      <p data-step="0">我們用門診案例演練臨床決策：七十八歲中度阿茲海默症伯伯，傍晚抗拒洗澡並推打看護，三週非藥物介入無效。</p>
+      <p data-step="1">檢查發現兩大線索：心電圖 QTc 延長到四百六十八毫秒，且有輕微小碎步與齒輪樣僵硬。這時該選哪種藥？</p>
+      <p data-step="2">先看選項 A：S-CitAD 試驗已證實 Escitalopram 對激動無效，且仍延長 QTc 十點八毫秒，對伯伯並不安全。</p>
+      <p data-step="3">再看選項 B 與 C：Mirtazapine 在 SYMBAD 試驗無效且增加照顧者負荷，列為 RG-T 4 不建議；Risperidone 或 Haloperidol 則會惡化巴金森步態導致跌倒。</p>
+      <p data-step="4">因此選項 D 最合適：選用第一級推薦的 Brexpiprazole，從零點五毫克慢速滴定到兩毫克，不延長 QTc 且低 EPS，滿四週評估療效。</p>
+    </template>
+  </section>
+
+  <!-- ==================== p16：減藥與停藥原則（Deprescribing Protocol）＋ 門診總結 ==================== -->
+  <section class="k-slide" data-chapter="情境與減藥停藥" data-title="減藥與停藥原則：四大時間點與實務策略">
+    <header class="k-head">
+      <h2>減藥與停藥原則：四大時間點與實務策略</h2>
+      <p class="k-sub">2026 台灣專家共識（Cheng 2026 Table 2 &amp; Table 4）：何時必須停藥？如何階梯式減量而不引發反彈復發？</p>
+    </header>
+    <div class="k-body">
+      <!-- 上半：減藥停藥四階段時間軸資訊圖（HTML 4-Card Flow） -->
+      <div class="k-panel" style="padding:16px 20px;margin-bottom:14px;background:var(--navy-wash)">
+        <h3 style="font-size:24px;color:#24476E;margin-bottom:10px">BPSD 藥物治療完整生命週期與減藥停藥（Deprescribing）四大時間點</h3>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+          <div data-s="1" style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border-top:8px solid #B5482F;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <span class="k-badge terra" style="font-size:16px">時間點 1：足量滿 4 週</span>
+              <h4 style="font-size:21px;color:#B5482F;margin:6px 0 4px">無效即停（Stop Early）</h4>
+              <p style="font-size:17px;line-height:1.36;margin:0;color:#1E2833">達目標劑量滿 4 週若 CMAI / NPI 無臨床顯著改善，於 <strong>1–2 週內漸進減停</strong>並轉換機轉，避免無效藥物長期暴露。</p>
+            </div>
+          </div>
+
+          <div data-s="2" style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border-top:8px solid #3F7A55;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <span class="k-badge sage" style="font-size:16px">時間點 2：穩定 3–6 個月</span>
+              <h4 style="font-size:21px;color:#3F7A55;margin:6px 0 4px">務實階梯減藥（Taper）</h4>
+              <p style="font-size:17px;line-height:1.36;margin:0;color:#1E2833">行為穩定滿 <strong>3–6 個月</strong>且家屬照護就緒時啟動：<strong>每 2–4 週調降 25%–50% 劑量</strong>（如 2 mg → 1 mg → 0.5 mg → 停）。</p>
+            </div>
+          </div>
+
+          <div data-s="3" style="background:#FFFFFF;border-radius:14px;padding:12px 14px;border-top:8px solid #24476E;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <span class="k-badge" style="font-size:16px">時間點 3：停藥後 ≥4 個月</span>
+              <h4 style="font-size:21px;color:#24476E;margin:6px 0 4px">每月密集追蹤復發</h4>
+              <p style="font-size:17px;line-height:1.36;margin:0;color:#1E2833">減藥中與停藥後<strong>至少 4 個月每月追蹤 NPI-Q</strong>，銜接日照與家屬支持；約 50–70% 穩定患者可成功停藥。</p>
+            </div>
+          </div>
+
+          <div data-s="4" style="background:#FDF6DD;border-radius:14px;padding:12px 14px;border-top:8px solid #D99B26;display:flex;flex-direction:column;justify-content:space-between">
+            <div>
+              <span class="k-badge butter" style="font-size:16px">時間點 4：高危復發亞群</span>
+              <h4 style="font-size:21px;color:#9A5B13;margin:6px 0 4px">退回最低有效維持劑量</h4>
+              <p style="font-size:17px;line-height:1.36;margin:0;color:#1E2833">HARMONY 與 ACCORD-1 顯示停藥復發高 2.8–3.6 倍；若減藥復發，<strong>果斷退回前階最低有效劑量</strong>，防旋轉門住院。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 下半：帶回門診三大行動原則 -->
+      <div class="k-g3" style="gap:20px;flex:1 1 auto;min-height:0" data-s="4">
+        <div class="k-card navy" style="padding:16px 22px;display:flex;flex-direction:column;justify-content:center">
+          <h3 style="font-size:25px;color:#24476E;margin-bottom:6px">原則一：先排查可逆誘因，選對受體機轉</h3>
+          <p style="font-size:20px;line-height:1.4">落實 ABCDE 評估；依四大症狀群與失智亞型鎖定靶向藥物（Brexpiprazole、Citalopram、Suvorexant、Pimavanserin），淘汰無效之 Mirtazapine 與 Escitalopram。</p>
+        </div>
+        <div class="k-card sage" style="padding:16px 22px;display:flex;flex-direction:column;justify-content:center">
+          <h3 style="font-size:25px;color:#3F7A55;margin-bottom:6px">原則二：慢速滴定，抓緊前 12 週監測窗</h3>
+          <p style="font-size:20px;line-height:1.4">Start low, go slow；首月每週檢視 EPS、血壓與跌倒；開立 SSRI 必查 ECG QTc、血鈉與抗血小板藥物出血交互作用。</p>
+        </div>
+        <div class="k-card terra" style="padding:16px 22px;display:flex;flex-direction:column;justify-content:center">
+          <h3 style="font-size:25px;color:#B5482F;margin-bottom:6px">原則三：4 週判療效、3–6 個月務實減藥</h3>
+          <p style="font-size:20px;line-height:1.4">足量 4 週無效立即停藥；穩定 3–6 個月以每 2–4 週減 25%–50% 探索停藥，停藥後持續追蹤 4 個月，兼顧患者安全與家屬量能。</p>
+        </div>
+      </div>
+      <div class="k-take sage" data-s="4" style="margin-top:12px">結語：BPSD 藥物治療不是終生枷鎖，而是「以精準靶向藥物為非藥物照護爭取時間窗」的動態安全橋樑。</div>
+    </div>
+    <p class="k-cite">資料來源：Cheng YC et al., J Chin Med Assoc 2026;89(2):99–111, Table 2 &amp; Table 4 [PMID 41527161]；Tariot 2021 NEJM [PMID 34289275]；Imbimbo 2025 CNS Drugs [PMID 39623197]</p>
+    <template class="k-narr">
+      <p data-step="0">最後一頁聚焦減藥與停藥原則：BPSD 藥物要吃多久？怎麼安全停藥？這張路徑圖整合了二零二六年台灣專家共識的四大時間點。</p>
+      <p data-step="1">時間點一：足量治療滿四週若無顯著改善，應在一到兩週內漸進停藥並改換機轉，避免無效藥物長期暴露。</p>
+      <p data-step="2">時間點二：症狀穩定滿三到六個月且家屬照護就緒時，啟動務實階梯減藥，每兩到四週調降百分之二十五到五十劑量，切忌驟停。</p>
+      <p data-step="3">時間點三：減藥中與停藥後至少四個月，每月系統性追蹤復發前兆，持續銜接非藥物環境支持。</p>
+      <p data-step="4">時間點四：若屬重度妄想攻擊或減藥即復發者，應果斷退回前階「最低有效維持劑量」，避免旋轉門式反覆住院。感謝各位醫師同仁參與，祝大家門診處方順利！</p>
+    </template>
+  </section>
+
+</main>
+
+<!-- 底部章節進度列 -->
+<footer id="k-chrome">
+  <span id="k-chapter"></span>
+  <div id="k-track"><div id="k-bar"></div></div>
+  <span id="k-counter"></span>
+</footer>
+
+<!-- 自動播放字幕與黑屏 -->
+<div id="k-sub"></div>
+<div id="k-black"></div>
+
+<!-- 總覽（O）與講稿面板（N） -->
+<div id="k-overview"><div id="k-ovgrid"></div></div>
+<aside id="k-notes" class="k-panelx">
+  <h3>本頁逐字稿（按 N 開關）</h3>
+  <div id="k-notesbody"></div>
+</aside>
+
+<!-- 開場模式選擇器 -->
+<div id="k-start">
+  <div class="box">
+    <h1>失智症精神行為症狀（BPSD）藥物治療最新進展</h1>
+    <p class="meta">受體機轉圖解・2026 台灣專家共識臨床決策・安全監測與減藥停藥原則（16 頁・15 分鐘）</p>
+    <div class="modes">
+      <div class="mode">
+        <h2>自動播放（含配音・配樂・字幕）</h2>
+        <p>自動翻頁、逐步揭示資訊圖表重點並搭配同步配音、輕柔背景音樂與底部字幕。</p>
+        <div class="opt">
+          <b>配音</b>
+          <label><input type="radio" name="kv" value="m" checked><span>男聲（大豪 2）</span></label>
+          <label><input type="radio" name="kv" value="f"><span>女聲</span></label>
+          <label><input type="radio" name="kv" value="off"><span>不配音</span></label>
+        </div>
+        <div class="opt">
+          <b>搭配</b>
+          <label><input type="checkbox" id="k-in-sub" checked><span>字幕</span></label>
+          <label><input type="checkbox" id="k-in-bgm" checked><span>背景音樂</span></label>
+        </div>
+        <button class="go sage" id="kgo-auto">▶ 開始自動播放</button>
+      </div>
+      <div class="mode">
+        <h2>主講者自己控場</h2>
+        <p>由主講者以鍵盤、滑鼠或手機觸控逐步揭示每一拍重點；可隨時開啟逐字稿或頁碼總覽。</p>
+        <p style="margin-top:auto;font-size:15px;color:var(--muted)">適合現場演講、查房教學或自行操作亞型分頁與臨床案例題。</p>
+        <button class="go" id="kgo-present">進入主講模式 →</button>
+      </div>
+    </div>
+    <p class="kb">版本 20261027-e570｜鍵盤：← → 或空白鍵翻頁／下一步｜N 逐字稿｜O 總覽跳頁｜B 黑屏｜Esc 回選單｜手機：點左右半邊翻頁、右下 ☰ 叫出控制列</p>
+  </div>
+</div>
+
+<!-- 浮動控制列 -->
+<div id="k-ctl" class="hide">
+  <button id="kc-prev" title="上一拍">◀</button>
+  <button id="kc-play" class="main auto-only">⏸ 暫停</button>
+  <button id="kc-next" title="下一拍">▶</button>
+  <span id="kc-time" class="t auto-only">00:00 / 00:00</span>
+  <button id="kc-voice" class="auto-only">配音：男</button>
+  <button id="kc-sub" class="auto-only" aria-pressed="true">字幕</button>
+  <button id="kc-bgm" class="auto-only" aria-pressed="true">配樂</button>
+  <button id="kc-notes" class="present-only">講稿 N</button>
+  <button id="kc-ov">總覽 O</button>
+  <button id="kc-mode">模式</button>
+</div>
+<button id="k-handle" title="控制列">☰</button>
+
+<!-- 播放結束面板 -->
+<div id="k-end">
+  <div class="box">
+    <h2 style="margin:0 0 8px;font-family:'Noto Serif TC',serif;font-size:34px">簡報播放完畢</h2>
+    <p style="margin:0;color:var(--ink-2)">您可以重頭播放，或切換為主講模式自由翻閱各頁機轉圖與臨床決策表。</p>
+    <div>
+      <button id="kend-replay">↻ 重頭播放</button>
+      <button id="kend-present" style="background:var(--sage)">切換主講模式</button>
+    </div>
+  </div>
+</div>
+
+<audio id="k-voice" preload="auto"></audio>
+<audio id="k-bgm" loop preload="auto"></audio>
+
+<script src="beats.js?v=bdb6ae97"></script>
+<script src="deck.js?v=2ae2b6e0"></script>
+</body>
+</html>
