@@ -1309,7 +1309,7 @@
 </aside>
 
 <!-- 開場模式選擇器 -->
-<div id="k-start">
+<div id="k-start" role="dialog" aria-label="選擇播放方式">
   <div class="box">
     <h1>失智症精神行為症狀（BPSD）藥物治療最新進展</h1>
     <p class="meta">受體機轉圖解・2026 台灣專家共識臨床決策・安全監測與減藥停藥原則（16 頁・15 分鐘）</p>
@@ -1317,17 +1317,9 @@
       <div class="mode">
         <h2>自動播放（含配音・配樂・字幕）</h2>
         <p>自動翻頁、逐步揭示資訊圖表重點並搭配同步配音、輕柔背景音樂與底部字幕。</p>
-        <div class="opt">
-          <b>配音</b>
-          <label><input type="radio" name="kv" value="m" checked><span>男聲（大豪 2）</span></label>
-
-          <label><input type="radio" name="kv" value="off"><span>不配音</span></label>
-        </div>
-        <div class="opt">
-          <b>搭配</b>
-          <label><input type="checkbox" id="k-in-sub" checked><span>字幕</span></label>
-          <label><input type="checkbox" id="k-in-bgm" checked><span>背景音樂</span></label>
-        </div>
+        <div class="opt" data-opt="voice"></div>
+        <div class="opt" data-opt="sub"><b>字幕</b><label><input type="checkbox" checked><span>顯示</span></label></div>
+        <div class="opt" data-opt="bgm"><b>配樂</b><label><input type="checkbox" checked><span>背景音樂</span></label></div>
         <button class="go sage" id="kgo-auto">▶ 開始自動播放</button>
       </div>
       <div class="mode">
@@ -1337,24 +1329,24 @@
         <button class="go" id="kgo-present">進入主講模式 →</button>
       </div>
     </div>
-    <p class="kb">版本 20261027-5b79｜鍵盤：← → 或空白鍵翻頁／下一步｜N 逐字稿｜O 總覽跳頁｜B 黑屏｜Esc 回選單｜手機：點左右半邊翻頁、右下 ☰ 叫出控制列</p>
+    <p class="kb">版本 20261027-e733｜鍵盤：← → 或空白鍵翻頁／下一步｜N 逐字稿｜O 總覽跳頁｜B 黑屏｜Esc 回選單｜手機：點左右半邊翻頁、右下 ☰ 叫出控制列</p>
   </div>
 </div>
 
 <!-- 浮動控制列 -->
-<div id="k-ctl" class="hide">
-  <button id="kc-prev" title="上一拍">◀</button>
-  <button id="kc-play" class="main auto-only">⏸ 暫停</button>
-  <button id="kc-next" title="下一拍">▶</button>
-  <span id="kc-time" class="t auto-only">00:00 / 00:00</span>
-  <button id="kc-voice" class="auto-only">配音：男</button>
-  <button id="kc-sub" class="auto-only" aria-pressed="true">字幕</button>
-  <button id="kc-bgm" class="auto-only" aria-pressed="true">配樂</button>
-  <button id="kc-notes" class="present-only">講稿 N</button>
-  <button id="kc-ov">總覽 O</button>
-  <button id="kc-mode">模式</button>
+<div id="k-ctl" class="hide" role="toolbar" aria-label="播放控制">
+  <button id="kb-prev" title="上一拍">◀</button>
+  <button id="kb-play" class="main auto-only">❚❚ 暫停</button>
+  <button id="kb-next" title="下一拍">▶</button>
+  <span id="kb-time" class="t auto-only">00:00 / 00:00</span>
+  <button id="kb-voice" class="auto-only">配音</button>
+  <button id="kb-sub" class="auto-only" aria-pressed="true">字幕</button>
+  <button id="kb-bgm" aria-pressed="true">配樂</button>
+  <button id="kb-notes" class="present-only">講稿 N</button>
+  <button id="kb-ov">總覽 O</button>
+  <button id="kb-fs">全螢幕</button>
+  <button id="kb-menu">選單</button>
 </div>
-<button id="k-handle" title="控制列">☰</button>
 
 <!-- 播放結束面板 -->
 <div id="k-end">
@@ -1364,6 +1356,7 @@
     <div>
       <button id="kend-replay">↻ 重頭播放</button>
       <button id="kend-present" style="background:var(--sage)">切換主講模式</button>
+      <button id="kend-menu" style="background:#5A697A">回到選單</button>
     </div>
   </div>
 </div>
@@ -1372,6 +1365,6 @@
 <audio id="k-bgm" loop preload="auto"></audio>
 
 <script src="beats.js?v=bdb6ae97"></script>
-<script src="deck.js?v=2ae2b6e0"></script>
+<script src="deck.js?v=398c9024"></script>
 </body>
 </html>

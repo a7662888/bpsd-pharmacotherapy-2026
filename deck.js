@@ -360,7 +360,7 @@
     else { pauseAuto(); }
   }
   function openMenu() { pauseAuto(); mode = null; document.body.classList.remove('present', 'auto'); menu && menu.classList.remove('off'); }
-  on($('#kend-again'), () => { go(0, 0); enter('auto'); });
+  on($('#kend-again'), () => { $('#k-end').classList.remove('on'); go(0, 0); enter('auto'); }); on($('#kend-replay'), () => { $('#k-end').classList.remove('on'); go(0, 0); enter('auto'); }); on($('#kend-present'), () => { $('#k-end').classList.remove('on'); go(0, 0); enter('present'); });
   on($('#kend-menu'), () => { $('#k-end').classList.remove('on'); go(0, 0); openMenu(); });
 
   /* ---------- 啟動 ---------- */
